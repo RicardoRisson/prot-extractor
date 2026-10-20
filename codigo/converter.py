@@ -1,13 +1,13 @@
-"""Converte os .jsonl do corpus em .csv. Listas (como evidences) viram JSON dentro da célula.
-Depois de gravar, relê o CSV e confere se tem as mesmas linhas e o mesmo conteúdo.
-
-Uso: python codigo/json_para_csv.py [arquivo.jsonl ...]
-Sem argumentos, converte corpus.jsonl, corpus_amostra.jsonl e ocorrencias.jsonl da pasta atual.
-"""
 import csv
 import json
 import sys
 from pathlib import Path
+
+ENTRADA = Path("resultados_json")
+SAIDA = Path("resultados_csv")
+# cabeçalho usado quando o arquivo não tem linhas (ex.: nenhuma ocorrência)
+COLUNAS_SE_VAZIO = {"ocorrencias": ["source_file", "indice_registro", "accession",
+                                    "source_path", "motivo", "decisao"]}
 
 
 def celula(v):
@@ -17,10 +17,11 @@ def celula(v):
 def converter(origem):
     with open(origem, encoding="utf-8") as f:
         linhas = [json.loads(l) for l in f if l.strip()]
-    destino = origem.with_suffix(".csv")
+    destino = SAIDA / f"{origem.stem}.csv"
     if not linhas:
-        destino.write_text("", encoding="utf-8")
-        return print(f"{origem.name}: vazio, {destino.name} criado sem linhas")
+        with open(destino, "w", newline="", encoding="utf-8") as f:
+            csv.writer(f).writerow(COLUNAS_SE_VAZIO.get(origem.stem, []))
+        return print(f"{origem.name}: nenhuma linha; {destino} criado só com o cabeçalho")
     colunas = list(dict.fromkeys(k for l in linhas for k in l))
     esperado = [{k: celula(l.get(k)) for k in colunas} for l in linhas]
     with open(destino, "w", newline="", encoding="utf-8") as f:
@@ -29,10 +30,14 @@ def converter(origem):
         w.writerows(esperado)
     with open(destino, newline="", encoding="utf-8") as f:
         if list(csv.DictReader(f)) != esperado:
-            raise SystemExit(f"{destino.name} diverge de {origem.name}")
-    print(f"{origem.name} -> {destino.name}: {len(linhas)} linhas, conteúdo conferido")
+            raise SystemExit(f"{destino} diverge de {origem}")
+    print(f"{origem} -> {destino}: {len(linhas)} linhas, conteúdo conferido")
 
 
 if __name__ == "__main__":
-    for arq in map(Path, sys.argv[1:] or ["corpus.jsonl", "corpus_amostra.jsonl", "ocorrencias.jsonl"]):
+    SAIDA.mkdir(exist_ok=True)
+    arquivos = [Path(a) for a in sys.argv[1:]] or sorted(ENTRADA.glob("*.jsonl"))
+    if not arquivos:
+        print(f"Nenhum .jsonl em {ENTRADA}/. Rode antes: python codigo/coletar.py")
+    for arq in arquivos:
         converter(arq) if arq.exists() else print(f"{arq}: não encontrado")

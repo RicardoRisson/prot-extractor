@@ -9,12 +9,14 @@ Arquivos: codigo/coletar.py e codigo/json_para_csv.py
 Os dois programas fazem a coleta e a organização descritas no guia de
 trabalho (passos 2 a 7 e 9).
 
-  coletar.py ........ baixa os registros do UniProt, guarda as respostas
-                      originais, extrai as descrições de pH e temperatura
-                      e gera o corpus, a amostra, as ocorrências e as
-                      contagens.
-  json_para_csv.py .. converte os arquivos .jsonl em .csv e confere se o
-                      conteúdo ficou igual.
+  coletar.py ........ pergunta quantas descrições você quer, baixa os
+                      registros do UniProt, guarda as respostas originais,
+                      extrai as descrições de pH e temperatura e grava o
+                      resultado, as ocorrências e as contagens em
+                      resultados_json/.
+  json_para_csv.py .. converte os .jsonl de resultados_json/ em .csv,
+                      gravados em resultados_csv/, e confere se o conteúdo
+                      ficou igual.
 
 Ficam fora destes programas: a conferência manual das 20 descrições
 (conferencia.csv), o resumo do passo 8 (resumo.csv), os gráficos, o
@@ -27,60 +29,73 @@ relatorio.md e o README.md.
   - Biblioteca requests:   pip install requests
     (a urllib3, também usada, é instalada junto com a requests)
   - json_para_csv.py usa apenas a biblioteca padrão do Python.
-  - Acesso à internet só é necessário durante a coleta.
+  - Acesso à internet só é necessário enquanto houver páginas a baixar.
 
 
 3. COMO EXECUTAR
 --------------------------------------------------------------------------
 Rode sempre a partir da raiz do projeto (a pasta que contém codigo/).
 
-  Primeira entrega (amostra de 100 descrições):
-      python codigo/coletar.py --amostra
-      python codigo/json_para_csv.py
-
-  Entrega final (corpus ampliado):
       python codigo/coletar.py
       python codigo/json_para_csv.py
 
-  Conferência antes de entregar (refaz tudo a partir de originais/):
-      python codigo/coletar.py
-      python codigo/json_para_csv.py
-  Com a coleta completa, o coletar.py não acessa a rede: só reextrai.
+O coletar.py não tem opções. Ao ser executado, ele pergunta:
 
-Opções do coletar.py:
-  --amostra       Para a coleta assim que houver pelo menos 100 descrições
-                  com as duas categorias. Sem essa opção, segue até a
-                  última página.
-  --saida PASTA   Pasta do projeto onde tudo é gravado (padrão: a atual).
-                  Use outra pasta para começar uma coleta nova.
-  --tamanho N     Registros por página, de 1 a 500 (padrão: 50). Só vale
-                  na primeira execução de uma pasta; depois, o script
-                  continua com o tamanho já usado.
+      Quantas descrições você quer? (um número, ou max para todas):
 
-Uso do json_para_csv.py:
-      python codigo/json_para_csv.py                 (converte os três)
-      python codigo/json_para_csv.py corpus.jsonl    (converte só esse)
-  Sem argumentos, converte corpus.jsonl, corpus_amostra.jsonl e
-  ocorrencias.jsonl. Cada X.jsonl gera um X.csv na mesma pasta.
+  Um número (ex.: 100)
+      Baixa páginas até ter pelo menos essa quantidade de descrições, com
+      as duas categorias presentes, e grava
+      resultados_json/corpus_amostra.jsonl com exatamente esse número (ou
+      com todas, se a consulta tiver menos).
+  max
+      Baixa todas as páginas da consulta e grava
+      resultados_json/corpus.jsonl com todas as descrições.
+
+Qualquer outra resposta faz a pergunta ser repetida.
+
+Roteiro do guia:
+  Primeira entrega ........ rode e responda 100
+  Entrega final ........... rode e responda max
+  Conferência final ....... rode de novo e responda max; com tudo já
+                            baixado, nada é baixado e o resultado deve ser
+                            idêntico (ver 11)
+  Depois de cada uma ...... python codigo/json_para_csv.py
+
+As páginas já baixadas são sempre reaproveitadas. Responder max depois de
+100 continua da página seguinte, sem baixar de novo as primeiras.
+
+Se "python" não funcionar, use "python3" (Linux e Mac) ou "py" (Windows).
 
 
 4. ARQUIVOS GERADOS
 --------------------------------------------------------------------------
-  originais/
-      coleta.json ............ registro da coleta (ver 5.2)
+  originais/                   o que veio do UniProt (criado pelo coletar.py)
+      coleta.json ............ registro da coleta (ver 5.3)
       pagina_0001.json ....... respostas da API, gravadas sem alteração
       pagina_0002.json
       ...
-  corpus.jsonl / .csv ........ todas as descrições extraídas até agora
-  corpus_amostra.jsonl / .csv  as 100 primeiras descrições (fixa)
-  ocorrencias.jsonl / .csv ... casos separados por problema ou dúvida
-  extracao.json .............. contagens da última extração (ver 9)
+  resultados_json/             o que o coletar.py produz
+      corpus_amostra.jsonl ... resultado quando a resposta é um número
+      corpus.jsonl ........... resultado quando a resposta é max
+      ocorrencias.jsonl ...... casos separados por problema ou dúvida
+      extracao.json .......... contagens da última execução (ver 9)
+  resultados_csv/              o que o json_para_csv.py produz
+      corpus_amostra.csv
+      corpus.csv
+      ocorrencias.csv
+
+  originais/ é a fonte e nunca é editada. As duas pastas de resultados
+  podem ser apagadas e recriadas a partir dela a qualquer momento.
 
 Diferença entre corpus e amostra:
-  - corpus_amostra é criada uma única vez e depois preservada, como
-    referência da primeira entrega.
-  - corpus é regravado a cada execução e cresce até conter todas as
-    descrições elegíveis da consulta.
+  - corpus_amostra traz as N primeiras descrições, em ordem de
+    description_id. Serve para conferir o procedimento.
+  - corpus traz todas as descrições elegíveis da consulta.
+  - Rodar de novo com um número regrava corpus_amostra.jsonl. Com o mesmo
+    número, o arquivo sai igual, mesmo depois da coleta completa, porque
+    as primeiras descrições vêm sempre das primeiras páginas. Se quiser
+    guardar uma amostra antes de pedir outro número, copie o arquivo.
 
 
 5. coletar.py EM DETALHE
@@ -88,40 +103,46 @@ Diferença entre corpus e amostra:
 
 5.1 Constantes (início do arquivo)
 
-  CONSULTA            "reviewed:true AND cc_bpcp:*" (passo 2 do guia).
-  BASE                Endereço de busca da API do UniProt.
-  BPCP                Tipo do comentário que contém os campos de interesse
-                      ("BIOPHYSICOCHEMICAL PROPERTIES").
-  CAMPOS              Nomes dos campos na fonte e a categoria que recebem:
-                      phDependence          -> ph_dependence
-                      temperatureDependence -> temperature_dependence
-  CHAVES_CONHECIDAS   Chaves esperadas no comentário BPCP. Uma chave fora
-                      desta lista gera uma ocorrência para conferência.
-  N_AMOSTRA           Tamanho da amostra (100).
+  CONSULTA    "reviewed:true AND cc_bpcp:*" (passo 2 do guia).
+  URL         Primeira página da busca: formato JSON, 50 registros por
+              página, ordenados por identificador (accession).
+  BPCP        Tipo do comentário que contém os campos de interesse
+              ("BIOPHYSICOCHEMICAL PROPERTIES").
+  CAMPOS      Nomes dos campos na fonte e a categoria que recebem:
+                phDependence          -> ph_dependence
+                temperatureDependence -> temperature_dependence
+  ORIGINAIS   Pasta das respostas originais (originais/).
+  REGISTRO    Arquivo de registro da coleta (originais/coleta.json).
 
-5.2 Coleta - função coletar()
+5.2 Pergunta - função perguntar()
 
-  1. Monta a URL inicial com a consulta, formato JSON, o tamanho de página
-     e ordenação por identificador (sort=accession asc).
-  2. Se originais/coleta.json já existe, retoma a partir da página
+  Lê a resposta, ignora espaços e maiúsculas. Devolve o número pedido, ou
+  None para max. Repete a pergunta se a resposta não for válida.
+
+5.3 Coleta - função coletar()
+
+  1. Se originais/coleta.json existe, continua a partir da página
      registrada em "proxima". Se não existe, começa do zero.
+  2. Antes de cada página, verifica se já há o suficiente (com um número)
+     ou se ainda há páginas (com max).
   3. Para cada página:
        - Faz a requisição. Erros temporários (429, 500, 502, 503, 504) são
          repetidos até 6 vezes, com espera crescente.
        - Lê a versão do UniProt no cabeçalho X-UniProt-Release. Se for
-         diferente da versão registrada, interrompe e pede outra pasta,
-         para não misturar versões.
+         diferente da versão registrada, interrompe, para não misturar
+         versões.
        - Confere se a resposta tem a lista "results". Se não tiver,
          interrompe, para que um formato inesperado não seja tratado como
          ausência de dados.
        - Grava a resposta exatamente como recebida em pagina_NNNN.json.
-       - Atualiza coleta.json, gravando primeiro um arquivo temporário e
-         depois substituindo o original, para não corromper o registro se
-         o programa for interrompido no meio.
+       - Atualiza coleta.json (grava um arquivo temporário e depois
+         substitui o original, para não corrompê-lo se o programa for
+         interrompido).
        - A próxima página vem do cabeçalho Link (paginação por cursor).
   4. Se a conexão falhar de vez, mostra um aviso, mantém o que já foi
-     salvo e segue para a extração. A coleta fica marcada como "parcial".
-     Uma falha nunca é registrada como página vazia.
+     salvo e segue para a extração com o que existe. O resultado fica
+     marcado como "parcial". Uma falha nunca é registrada como página
+     vazia.
 
   Campos de coleta.json:
     consulta               consulta usada
@@ -131,87 +152,85 @@ Diferença entre corpus e amostra:
     data_versao            data de lançamento dessa versão
     total_registros_busca  total de REGISTROS informado pela busca
                            (não é o total de descrições)
-    paginas                lista com arquivo, url, número de registros e
-                           data de cada página baixada
-    proxima                endereço da próxima página, ou null quando a
-                           coleta terminou
+    paginas                arquivo, url, número de registros e data de
+                           cada página baixada
+    proxima                endereço da próxima página, ou null quando todas
+                           já foram baixadas
 
-5.3 Extração - função extrair()
+5.4 Extração - função extrair()
 
   Lê as páginas listadas em coleta.json, na ordem em que foram baixadas.
   Para cada registro:
     1. Pega o identificador (primaryAccession) e a sequência
        (sequence.value).
-    2. Procura os comentários do tipo BIOPHYSICOCHEMICAL PROPERTIES e
-       guarda a posição de cada um na lista comments.
+    2. Procura os comentários BIOPHYSICOCHEMICAL PROPERTIES, guardando a
+       posição de cada um na lista comments.
     3. Dentro deles, percorre phDependence.texts e
        temperatureDependence.texts. CADA ELEMENTO DESSAS LISTAS VIRA UMA
-       LINHA DO CORPUS (passo 4 do guia):
+       LINHA (passo 4 do guia):
          - uma proteína com um texto de pH e um de temperatura gera
            2 linhas;
          - um texto com várias frases continua sendo 1 linha;
          - dois elementos no mesmo campo geram 2 linhas.
-    4. Registros sem nenhum texto nesses dois campos (por exemplo, só com
+    4. Registros sem texto nesses dois campos (por exemplo, só com
        parâmetros cinéticos) não geram linhas e são contados em
-       "registros_sem_ph_nem_temperatura". Não são ocorrências: são
-       exclusões previstas pelas regras.
-    5. Cada candidata a linha passa pelas verificações da seção 8. Se
-       falhar, vai para as ocorrências em vez do corpus.
+       "registros_sem_ph_nem_temperatura". São exclusões previstas pelas
+       regras, não ocorrências.
+    5. Cada candidata a linha passa pelas verificações da seção 8.
 
   No fim, as linhas são ordenadas por description_id.
 
   Normalização (text_normalized): " ".join(texto.split()). Remove espaços
   nas pontas e troca qualquer sequência de espaços, tabulações ou quebras
-  de linha por um único espaço. Nada mais é alterado: palavras,
-  maiúsculas, pontuação, números, unidades e negações ficam iguais.
-  text_original guarda o texto intacto.
+  de linha por um único espaço. Palavras, maiúsculas, pontuação, números,
+  unidades e negações ficam iguais. text_original guarda o texto intacto.
 
-  Evidências: vêm de texts[j].evidences, ou seja, só as evidências daquele
-  texto. As publicações do registro não são associadas automaticamente a
-  todos os textos. Sem evidências, a coluna recebe uma lista vazia [].
+  Evidências: vêm de texts[j].evidences, só as daquele texto. As
+  publicações do registro não são associadas automaticamente a todos os
+  textos. Sem evidências, a coluna recebe uma lista vazia [].
 
-5.4 Regra da amostra - funções pronta() e amostra()
+5.5 Seleção da amostra - funções pronta() e selecionar()
 
-  pronta(): verdadeira quando há pelo menos 100 descrições e as duas
-  categorias aparecem. No modo --amostra, a coleta para assim que isso
+  pronta(): verdadeira quando há pelo menos N descrições e as duas
+  categorias aparecem. Com um número, a coleta para assim que isso
   acontece.
 
-  amostra(): pega as 100 primeiras descrições por description_id. Se uma
+  selecionar(): pega as N primeiras descrições por description_id. Se uma
   categoria não aparecer entre elas, troca a última linha pela primeira
-  descrição dessa categoria, na mesma ordem. Se a categoria não existir
-  nos dados, nada é inventado. Com menos de 100 descrições disponíveis,
-  a amostra traz todas.
+  descrição dessa categoria, na mesma ordem (passo 6 do guia). Se a
+  categoria não existir nos dados, nada é inventado.
 
-  A amostra só é gravada se o arquivo ainda não existir e se as
-  descrições forem suficientes (ou a coleta tiver terminado). Assim, uma
-  coleta interrompida cedo não grava uma amostra incompleta.
+5.6 Fluxo principal - função main()
 
-5.5 Fluxo principal - função main()
-
-  1. Lê as opções da linha de comando.
-  2. Coleta (ou retoma, ou pula, se a coleta já terminou).
+  1. Pergunta quantas descrições.
+  2. Coleta (ou continua, ou não baixa nada se já houver o suficiente).
   3. Extrai as descrições de todas as páginas salvas.
-  4. Grava corpus.jsonl e ocorrencias.jsonl.
-  5. Grava corpus_amostra.jsonl, se ainda não existir.
-  6. Grava extracao.json e mostra as contagens na tela.
+  4. Grava em resultados_json/ o corpus_amostra.jsonl (número) ou o
+     corpus.jsonl (max).
+  5. Grava resultados_json/ocorrencias.jsonl.
+  6. Grava resultados_json/extracao.json e mostra as contagens na tela.
 
 
 6. json_para_csv.py EM DETALHE
 --------------------------------------------------------------------------
+  Uso:  python codigo/json_para_csv.py
+            (converte todos os .jsonl de resultados_json/)
+        python codigo/json_para_csv.py resultados_json/corpus.jsonl
+            (converte só esse)
+  Cada X.jsonl gera resultados_csv/X.csv. Se resultados_json/ estiver
+  vazia, o programa avisa que é preciso rodar antes o coletar.py.
+
   1. Lê o .jsonl linha a linha.
   2. As colunas do CSV são as chaves dos registros, na ordem em que
      aparecem.
   3. Listas e objetos (como evidences) são gravados como texto JSON dentro
      da célula, sem perder itens. Valores nulos viram célula vazia.
   4. Depois de gravar, relê o CSV e compara linha por linha com o JSONL.
-     Se houver qualquer diferença, para com erro. A mensagem
-     "conteúdo conferido" confirma que os dois formatos têm as mesmas
-     linhas e o mesmo conteúdo (passo 7 do guia).
-  5. Arquivo .jsonl vazio gera um .csv só com o cabeçalho. Isso deixa
+     Se houver diferença, para com erro. A mensagem "conteúdo conferido"
+     confirma que os dois formatos têm as mesmas linhas e o mesmo
+     conteúdo (passo 7 do guia).
+  5. Um .jsonl vazio gera um .csv só com o cabeçalho, o que deixa
      registrado, por exemplo, que não houve ocorrências.
-
-  O CSV é gravado em UTF-8, com aspas onde necessário, o que preserva
-  vírgulas, aspas e quebras de linha dentro dos textos.
 
 
 7. COLUNAS DO CORPUS
@@ -226,12 +245,12 @@ Diferença entre corpus e amostra:
   property_type    ph_dependence ou temperature_dependence, conforme o
                    campo de origem.
   text_original    texts[j].value, exatamente como na fonte.
-  text_normalized  cópia com espaços padronizados (ver 5.3).
+  text_normalized  cópia com espaços padronizados (ver 5.4).
   evidences        texts[j].evidences; [] se ausente.
-  source_file      página de onde a linha veio (ex.:
-                   originais/pagina_0001.json).
-  source_path      posição do texto dentro do registro, com índices (ex.:
-                   comments[3].phDependence.texts[0]).
+  source_file      página de onde a linha veio
+                   (ex.: originais/pagina_0001.json).
+  source_path      posição do texto no registro, com índices
+                   (ex.: comments[3].phDependence.texts[0]).
 
   Para achar uma linha na fonte: abra source_file, localize o registro
   pelo accession e siga source_path.
@@ -239,6 +258,8 @@ Diferença entre corpus e amostra:
 
 8. OCORRÊNCIAS: MOTIVOS E DECISÕES
 --------------------------------------------------------------------------
+O arquivo resultados_json/ocorrencias.jsonl existe para que nada
+desapareça em silêncio.
 Campos: source_file, indice_registro (posição do registro na lista
 results da página), accession, source_path, motivo, decisao.
 
@@ -252,71 +273,71 @@ results da página), accession, source_path, motivo, decisao.
     mesmo registro processado duas vezes)
   sem comentário BPCP, embora a busca o    nada extraído; conferir
     exija                                    estrutura
-  campo desconhecido: [...]                descrições mantidas; conferir
 
-As duas últimas servem para detectar mudanças na estrutura dos arquivos,
+O último motivo serve para detectar mudanças na estrutura dos arquivos,
 para que um campo renomeado não pareça ausência de informação biológica.
 
 Textos iguais em proteínas diferentes NÃO são ocorrências: permanecem no
 corpus, como pede o guia.
 
-Na primeira coleta real, o arquivo ficou vazio, o que indica que os
-registros vieram completos e com a estrutura esperada.
+As ocorrências cobrem todas as páginas baixadas, não só as descrições que
+entraram na amostra. Na primeira coleta real, o arquivo ficou vazio.
 
 
 9. CONTAGENS EM extracao.json
 --------------------------------------------------------------------------
-  consulta, versao_uniprot, data_versao   identificação da coleta
-  situacao                  "completa" (não há próxima página) ou
-                            "parcial"
-  paginas                   páginas baixadas
-  registros_na_busca        total de registros informado pela API
-  registros_processados     registros lidos das páginas salvas
+  pedido                    número digitado ou "max"
+  arquivo                   arquivo gravado
+                            (resultados_json/corpus_amostra.jsonl ou
+                            resultados_json/corpus.jsonl)
+  situacao                  "completa" ou "parcial" (coleta interrompida
+                            antes de reunir o pedido)
+  versao_uniprot, data_versao   versão do banco usada
+  paginas                   páginas baixadas até agora
+  registros_processados     registros lidos dessas páginas
   registros_sem_ph_nem_temperatura  registros excluídos por não terem
                             texto nos dois campos
-  descricoes                linhas do corpus
-  proteinas                 accessions distintos no corpus
-  por_categoria             descrições de pH e de temperatura
+  descricoes_extraidas      descrições encontradas em todas as páginas
+  descricoes_no_arquivo     descrições gravadas no arquivo
+  proteinas_no_arquivo      accessions distintos no arquivo
+  por_categoria             descrições de pH e de temperatura no arquivo
   total_ocorrencias         quantidade de ocorrências (0 se nenhuma)
-  ocorrencias               contagem por motivo, ou "nenhuma ocorrência
-                            encontrada"
 
-Atenção: registros_na_busca conta registros, descricoes conta linhas.
-São números diferentes e não devem ser confundidos (passo 9 do guia).
+Atenção: total_registros_busca (em coleta.json) conta registros;
+descricoes_* contam linhas. São números diferentes (passo 9 do guia).
 
 
 10. SITUAÇÕES ESPECIAIS
 --------------------------------------------------------------------------
   Falha de conexão
-      O script avisa, mantém tudo que já baixou e marca a coleta como
-      parcial. Rode de novo o mesmo comando para continuar da última
+      O script avisa, mantém tudo que já baixou e grava o resultado como
+      parcial. Rode de novo com a mesma resposta para continuar da última
       página concluída.
 
   Mudança de versão do UniProt no meio da coleta
-      O script para. Comece uma coleta nova em outra pasta:
-          python codigo/coletar.py --saida coleta_nova
+      O script para. Renomeie a pasta originais/ (ex.: originais_2026_04)
+      e rode de novo para começar uma coleta nova na versão atual.
 
   Resposta em formato inesperado
       O script para e mostra o endereço da página. Abra a resposta no
       navegador e confira antes de continuar.
 
   Começar uma coleta do zero
-      Use outra pasta com --saida. Não apague arquivos de originais/ de
-      uma coleta em andamento.
+      Renomeie ou mova a pasta originais/ e rode de novo.
 
-  Recriar a amostra
-      Apague corpus_amostra.jsonl e rode o coletar.py de novo. Se as
-      páginas necessárias já estão em originais/, nada é baixado.
+  Pedir mais descrições do que existem
+      O script baixa todas as páginas, grava todas as descrições e avisa
+      quantas havia.
 
 
 11. REPRODUZIR E CONFERIR
 --------------------------------------------------------------------------
 O guia pede que, antes da entrega, a organização seja refeita a partir
-dos arquivos salvos. Com a coleta completa, basta rodar de novo os dois
-scripts: o coletar.py não acessa a rede e o resultado deve ser idêntico.
+dos arquivos salvos. Com a coleta completa, rode de novo os dois scripts
+respondendo max: nada é baixado e o resultado deve ser idêntico.
 
 Para comparar, calcule a assinatura do arquivo antes e depois:
-    python -c "import hashlib;print(hashlib.sha256(open('corpus.jsonl','rb').read()).hexdigest())"
+    python -c "import hashlib;print(hashlib.sha256(open('resultados_json/corpus.jsonl','rb').read()).hexdigest())"
 Os dois valores devem ser iguais.
 
 
@@ -325,6 +346,9 @@ Os dois valores devem ser iguais.
   - A amostra não é aleatória. Como segue a ordem dos identificadores, só
     reúne proteínas cujo accession começa com A0A0... e não representa o
     UniProt como um todo.
+  - Com um número grande, o script reconta as descrições a cada página
+    para saber quando parar, o que deixa a coleta mais lenta. Para pegar
+    tudo, prefira max.
   - A ordenação é alfabética. Em um registro com 10 ou mais textos no
     mesmo campo, texts[10] viria antes de texts[2]. É raro e não afeta o
     conteúdo.
@@ -333,9 +357,8 @@ Os dois valores devem ser iguais.
   - Nem toda evidência é experimental. O campo evidenceCode usa códigos
     ECO; por exemplo, ECO:0000269 indica evidência experimental e
     ECO:0000303, uma declaração de autor sem suporte rastreável.
-  - Os arquivos de originais/ guardam os registros completos (sequência,
-    referências, anotações etc.) e podem ocupar bastante espaço na coleta
-    completa.
+  - Os arquivos de originais/ guardam os registros completos e podem
+    ocupar bastante espaço na coleta completa.
   - O Excel corta células com mais de 32.767 caracteres. Uma sequência
     muito longa pode parecer truncada na planilha, mas o CSV e o JSONL
     continuam íntegros.
@@ -345,13 +368,11 @@ Os dois valores devem ser iguais.
 
 13. COMO ADAPTAR
 --------------------------------------------------------------------------
-  Mudar a consulta ........ edite CONSULTA e use outra pasta (--saida).
+  Mudar a consulta ........ edite CONSULTA e renomeie originais/ antes de
+                            rodar, para não misturar coletas.
   Mudar o tamanho da
-    amostra ............... edite N_AMOSTRA.
-  Chave nova no comentário
-    BPCP .................. se ela for legítima e aparecer em quase todos
-                            os registros como "campo desconhecido",
-                            adicione-a a CHAVES_CONHECIDAS.
+    página ................ troque "size": 50 em URL (até 500). Vale só
+                            para coletas novas.
   Incluir outro campo ..... acrescente o par nome_na_fonte: categoria em
                             CAMPOS (fora do escopo atual do guia).
 
@@ -359,32 +380,42 @@ Os dois valores devem ser iguais.
 14. TESTES REALIZADOS
 --------------------------------------------------------------------------
   Com uma API simulada:
-    - paginação por cursor e leitura dos cabeçalhos de versão;
-    - falha 503 no meio da coleta e retomada da página seguinte;
-    - reextração sem rede gerando arquivos idênticos byte a byte;
-    - ocorrências: sem sequência, sem comentário BPCP, texto não
-      interpretável e campo desconhecido;
-    - normalização de espaços e quebras de linha;
-    - amostra com o limite padrão de 100, inclusive a troca da última
-      linha quando falta uma categoria;
-    - conversão para CSV com conferência do conteúdo e arquivo vazio.
+    - respostas inválidas (abc, 0) fazem a pergunta ser repetida;
+    - 100: duas páginas baixadas, amostra com 100 descrições únicas e em
+      ordem;
+    - max depois de 100: continuou da página 3, sem baixar de novo as
+      anteriores;
+    - 100 de novo com tudo baixado: nenhum download e amostra idêntica
+      byte a byte;
+    - troca da última linha quando falta uma categoria;
+    - pedido maior que o total: todas as descrições gravadas e aviso;
+    - falha 503 no meio da coleta, resultado parcial e retomada;
+    - ocorrências: sem sequência, sem comentário BPCP e texto não
+      interpretável;
+    - conversão para CSV com conferência do conteúdo.
 
   Com dados reais:
     - registro A0A023I7E1: duas linhas, com source_path
       comments[3].phDependence.texts[0] e
       comments[3].temperatureDependence.texts[0];
     - primeira coleta (páginas 1 a 3): amostra com 100 descrições únicas
-      de 63 proteínas, 59 de pH e 41 de temperatura, em ordem, sem
-      ocorrências.
+      de 63 proteínas, 59 de pH e 41 de temperatura, sem ocorrências.
 
 
 15. HISTÓRICO
 --------------------------------------------------------------------------
-  Versão 1   Coleta, extração, amostra, ocorrências e conversão para CSV.
-  Versão 2   extracao.json passa a mostrar total_ocorrencias e a frase
-             "nenhuma ocorrência encontrada"; um .jsonl vazio gera .csv
-             com cabeçalho. O corpus e a amostra são iguais nas duas
-             versões.
+  Versão 1   Coleta, extração, amostra, ocorrências e conversão para CSV,
+             com as opções --amostra, --saida e --tamanho.
+  Versão 2   extracao.json passa a mostrar total_ocorrencias; um .jsonl
+             vazio gera .csv com cabeçalho.
+  Versão 3   Sem opções: o programa pergunta quantas descrições (ou max).
+             Removidos o alerta de "campo desconhecido" e a preservação
+             automática da amostra. O formato das linhas do corpus e das
+             ocorrências não mudou, e a pasta originais/ das versões
+             anteriores é reaproveitada.
+  Versão 4   Resultados separados por pasta: os .jsonl e o extracao.json
+             vão para resultados_json/ e os .csv para resultados_csv/.
+             originais/ continua igual.
 
 
 16. FONTE E LICENÇA DOS DADOS
