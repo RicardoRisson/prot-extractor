@@ -13,9 +13,10 @@ URL = "https://rest.uniprot.org/uniprotkb/search?" + urlencode(
     {"query": CONSULTA, "format": "json", "size": 50, "sort": "accession asc"})
 BPCP = "BIOPHYSICOCHEMICAL PROPERTIES"
 CAMPOS = {"phDependence": "ph_dependence", "temperatureDependence": "temperature_dependence"}
-ORIGINAIS = Path("originais")
+RAIZ = Path(__file__).resolve().parent.parent
+ORIGINAIS = RAIZ / "originais"
 REGISTRO = ORIGINAIS / "coleta.json"
-RESULTADOS = Path("resultados_json")
+RESULTADOS = RAIZ / "resultados_json"
 
 
 def agora():
@@ -78,7 +79,7 @@ def extrair(coleta):
 
     for pagina in coleta["paginas"]:
         fonte = f"originais/{pagina['arquivo']}"
-        for k, reg in enumerate(json.loads(Path(fonte).read_bytes())["results"]):
+        for k, reg in enumerate(json.loads((RAIZ / fonte).read_bytes())["results"]):
             acc = reg.get("primaryAccession")
             seq = (reg.get("sequence") or {}).get("value")
             comentarios = [(i, c) for i, c in enumerate(reg.get("comments") or []) if c.get("commentType") == BPCP]
@@ -126,32 +127,41 @@ def gravar_jsonl(caminho, linhas):
         f.writelines(json.dumps(l, ensure_ascii=False) + "\n" for l in linhas)
 
 
+def contar(linhas):
+    return {"descricoes": len(linhas), "proteinas": len({l["accession"] for l in linhas}),
+            "por_categoria": Counter(l["property_type"] for l in linhas)}
+
+
 def main():
     n = perguntar()
     parar = (lambda coleta: False) if n is None else (lambda coleta: pronta(extrair(coleta)[0], n))
     coleta = coletar(parar)
     linhas, ocorrencias, sem_campos = extrair(coleta)
 
-    arquivo, selecao = ("corpus.jsonl", linhas) if n is None else ("corpus_amostra.jsonl", selecionar(linhas, n))
     RESULTADOS.mkdir(exist_ok=True)
-    gravar_jsonl(RESULTADOS / arquivo, selecao)
+    gravar_jsonl(RESULTADOS / "corpus.jsonl", linhas)
     gravar_jsonl(RESULTADOS / "ocorrencias.jsonl", ocorrencias)
+    if n is not None:
+        amostra = selecionar(linhas, n)
+        gravar_jsonl(RESULTADOS / "corpus_amostra.jsonl", amostra)
 
     incompleta = coleta["proxima"] and (n is None or not pronta(linhas, n))
-    resumo = {"pedido": "max" if n is None else n, "arquivo": f"{RESULTADOS.name}/{arquivo}",
-              "situacao": "parcial" if incompleta else "completa",
+    resumo = {"pedido": "max" if n is None else n, "situacao": "parcial" if incompleta else "completa",
+              "todas_as_paginas_baixadas": coleta["proxima"] is None,
               "versao_uniprot": coleta["versao_uniprot"], "data_versao": coleta["data_versao"],
               "paginas": len(coleta["paginas"]),
               "registros_processados": sum(p["registros"] for p in coleta["paginas"]),
               "registros_sem_ph_nem_temperatura": sem_campos,
-              "descricoes_extraidas": len(linhas), "descricoes_no_arquivo": len(selecao),
-              "proteinas_no_arquivo": len({l["accession"] for l in selecao}),
-              "por_categoria": Counter(l["property_type"] for l in selecao),
+              "corpus": contar(linhas), "amostra": contar(amostra) if n is not None else None,
               "total_ocorrencias": len(ocorrencias)}
     (RESULTADOS / "extracao.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(resumo, ensure_ascii=False, indent=2))
-    if n and not incompleta and len(selecao) < n:
-        print(f"A consulta só tem {len(selecao)} descrições; todas foram gravadas.")
+
+    if not incompleta:
+        if n is not None and len(linhas) < n:
+            print(f"A consulta só tem {len(linhas)} descrições; todas foram gravadas na amostra.")
+        for tipo in set(CAMPOS.values()) - {l["property_type"] for l in linhas}:
+            print(f"Atenção: não há descrições de {tipo} nos resultados disponíveis.")
 
 
 if __name__ == "__main__":
