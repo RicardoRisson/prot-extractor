@@ -1,0 +1,28 @@
+VERIFICAÇÃO DO CORPUS
+versão do UniProt: 2026_03
+coleta completa (todas as páginas baixadas): não
+
+== corpus (resultados_json/corpus.jsonl): 111 descrições ==
+identificadores únicos: ok
+campos obrigatórios preenchidos: ok
+descrições localizadas na origem: ok
+texto original igual à origem: ok
+demais colunas iguais à origem: ok
+categoria igual ao campo de origem: ok
+texto padronizado segue a regra: ok
+CSV igual ao JSONL: ok
+
+== amostra (resultados_json/corpus_amostra.jsonl): 100 descrições ==
+identificadores únicos: ok
+campos obrigatórios preenchidos: ok
+descrições localizadas na origem: ok
+texto original igual à origem: ok
+demais colunas iguais à origem: ok
+categoria igual ao campo de origem: ok
+texto padronizado segue a regra: ok
+CSV igual ao JSONL: ok
+
+== consistência ==
+amostra contida no corpus: ok
+amostra segue a regra do passo 6: ok
+reextração a partir de originais/ igual ao corpus: ok

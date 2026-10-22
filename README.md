@@ -20,46 +20,68 @@ O corpus foi pensado para estudos futuros de processamento de linguagem natural.
 ## Início rápido
 
 ```bash
-pip install requests
-python codigo/coletar.py        # pergunta quantas descrições: um número (ex.: 100) ou max
-python codigo/json_para_csv.py  # gera as versões em CSV
+pip install requests matplotlib
+cd codigo
+python coletar.py        # pergunta "Descrições:": responda um número (ex.: 100) ou max
+python organiza_json.py  # formata os arquivos de originais/ para leitura
+python converter.py      # gera as versões em CSV
+python verificar.py      # confere o corpus com os arquivos originais
+python resumo.py         # gera o resumo e os gráficos
 ```
 
-- **Um número** grava `resultados_json/corpus_amostra.jsonl` com essa quantidade de descrições.
-- **`max`** percorre todas as páginas da consulta e grava `resultados_json/corpus.jsonl` com todas as descrições.
+Os scripts podem ser rodados de dentro de `codigo/` ou da raiz do projeto, com `python codigo/coletar.py`. Em qualquer caso, os dados ficam na raiz, ao lado de `codigo/`.
 
-As páginas já baixadas ficam em `originais/` e são reaproveitadas. Se a conexão cair, basta rodar de novo para continuar de onde parou.
+- **Um número** baixa só as páginas necessárias e grava `resultados_json/corpus_amostra.jsonl` com essa quantidade de descrições.
+- **`max`** percorre todas as páginas da consulta.
+
+Nos dois casos, `resultados_json/corpus.jsonl` guarda todas as descrições extraídas das páginas baixadas até o momento. Depois do `max`, são todas as descrições da consulta.
+
+As páginas já baixadas ficam em `originais/` e são reaproveitadas. Se a conexão cair, basta rodar de novo para continuar de onde parou. As páginas novas chegam numa linha só, então rode o `organiza_json.py` de novo depois de cada coleta.
 
 ## Como funciona
 
 ```mermaid
 flowchart LR
-    A[(API do UniProt)] -->|coletar.py| B["originais/<br/>respostas JSON sem edição"]
+    A[(API do UniProt)] -->|coletar.py| B["originais/<br/>respostas JSON da API"]
+    B -->|organiza_json.py| B
     B -->|coletar.py| C["resultados_json/<br/>corpus, amostra e ocorrências"]
-    C -->|json_para_csv.py| D["resultados_csv/<br/>mesmos dados em CSV"]
+    C -->|converter.py| D["resultados_csv/<br/>mesmos dados em CSV"]
+    C -->|verificar.py| E["resultados_txt/<br/>verificacao.txt"]
+    C -->|resumo.py| F["resumo.txt, resumo.csv<br/>e graficos.png"]
 ```
 
-1. O `coletar.py` consulta a API do UniProt, página por página, e salva cada resposta sem nenhuma alteração em `originais/`.
-2. A partir desses arquivos, extrai os textos dos campos **pH Dependence** e **Temperature Dependence**. **Cada elemento textual vira uma linha.** Uma proteína com uma descrição de pH e uma de temperatura gera duas linhas. Um texto com várias frases continua sendo uma linha só.
-3. Casos com problema, como registros sem identificador, sem sequência ou com texto inválido, não são descartados em silêncio: vão para `ocorrencias.jsonl`, com o motivo e a decisão tomada.
-4. O `json_para_csv.py` converte os resultados para CSV e relê cada arquivo para confirmar que o conteúdo é idêntico ao JSONL.
+1. O `coletar.py` consulta a API do UniProt, página por página, e salva cada resposta em `originais/` exatamente como chegou.
+2. O `organiza_json.py` reescreve esses arquivos com quebras de linha e recuo, para que possam ser lidos e conferidos. Só a formatação muda: antes de substituir cada arquivo, o script confere que o conteúdo continua idêntico ao recebido da API.
+3. A partir desses arquivos, o `coletar.py` extrai os textos dos campos **pH Dependence** e **Temperature Dependence**. **Cada elemento textual vira uma linha.** Uma proteína com uma descrição de pH e uma de temperatura gera duas linhas. Um texto com várias frases continua sendo uma linha só.
+4. Casos com problema, como registros sem identificador, sem sequência ou com texto inválido, não são descartados em silêncio: vão para `ocorrencias.jsonl`, com o motivo e a decisão tomada.
+5. O `converter.py` gera as versões em CSV e relê cada arquivo para confirmar que o conteúdo é idêntico ao JSONL.
+6. O `verificar.py` confere cada linha com o registro original: identificador único, campos preenchidos, texto, sequência, organismo, evidências e categoria iguais à fonte. Também confirma que extrair de novo as páginas salvas reproduz o corpus.
+7. O `resumo.py` conta registros, descrições, proteínas e organismos, calcula o comprimento mediano dos textos, lista os textos mais repetidos e desenha os gráficos.
 
-## Estrutura do repositório
+## Estrutura do projeto
+
+Este repositório guarda o código e a documentação. As pastas de dados não são versionadas aqui: elas são criadas ao rodar os scripts, e os arquivos da coleta entregue são enviados à parte.
 
 ```
 ├── codigo/
 │   ├── coletar.py            coleta e extração
-│   ├── json_para_csv.py      conversão para CSV
+│   ├── organiza_json.py      formatação dos arquivos de originais/
+│   ├── converter.py          conversão para CSV
+│   ├── verificar.py          verificações gerais
+│   ├── resumo.py             resumo e gráficos
 │   └── documentacao.txt      documentação detalhada do código
-├── originais/                respostas do UniProt, sem edição
+├── originais/                respostas do UniProt, com o conteúdo sem edição
 │   ├── coleta.json           consulta, datas, versão do UniProt e páginas baixadas
 │   └── pagina_0001.json …
 ├── resultados_json/
 │   ├── corpus_amostra.jsonl  amostra (primeira entrega)
-│   ├── corpus.jsonl          corpus completo
+│   ├── corpus.jsonl          todas as descrições das páginas baixadas
 │   ├── ocorrencias.jsonl     casos separados para conferência
 │   └── extracao.json         contagens da última execução
-└── resultados_csv/           os mesmos arquivos em CSV
+├── resultados_csv/           os mesmos arquivos em CSV, mais resumo.csv
+├── resultados_txt/           verificacao.txt e resumo.txt
+└── resultados_graficos/
+    └── graficos.png          descrições por categoria e comprimento dos textos do corpus
 ```
 
 ## Critérios de inclusão
@@ -96,17 +118,15 @@ No CSV, a lista de evidências aparece como texto JSON dentro da célula.
 | --- | --- |
 | Consulta | `reviewed:true AND cc_bpcp:*` |
 | Fonte | `https://rest.uniprot.org/uniprotkb/search` |
-| Versão do UniProt | _preencher com `versao_uniprot` de `originais/coleta.json`_ |
-| Data da versão | _preencher com `data_versao` de `originais/coleta.json`_ |
+| Versão do UniProt | 2026_03 |
+| Data da versão | 02-September-2026 |
 | Início da coleta | _preencher com `inicio` de `originais/coleta.json`_ |
 
 ## Reprodutibilidade
 
-Com a coleta completa, rodar os dois scripts de novo refaz toda a organização a partir de `originais/`, sem acessar a internet. O resultado deve ser idêntico byte a byte. Para conferir, compare a assinatura do arquivo antes e depois:
+Com a coleta completa, rodar `coletar.py` (respondendo `max`), `converter.py`, `verificar.py` e `resumo.py` de novo refaz toda a organização a partir de `originais/`, sem acessar a internet. O `verificar.py` confirma que a reextração reproduz o corpus e registra o resultado em `resultados_txt/verificacao.txt`. As contagens do resumo devem permanecer iguais.
 
-```bash
-python -c "import hashlib;print(hashlib.sha256(open('resultados_json/corpus.jsonl','rb').read()).hexdigest())"
-```
+A formatação feita pelo `organiza_json.py` não altera esse resultado, porque o conteúdo dos arquivos continua o mesmo.
 
 Uma nova consulta ao site pode trazer registros atualizados. Por isso, a referência da coleta são sempre os arquivos salvos em `originais/`.
 
@@ -122,14 +142,15 @@ Uma nova consulta ao site pode trazer registros atualizados. Por isso, a referê
 
 - [x] Coleta e extração automatizadas
 - [x] Amostra de 100 descrições (63 proteínas: 59 de pH e 41 de temperatura), sem ocorrências
+- [x] Verificações gerais, resumo e gráficos automatizados
+- [ ] Conferência manual de 20 descrições da amostra (`conferencia.csv`)
 - [ ] Corpus completo
-- [ ] Conferência manual de 20 descrições (`conferencia.csv`)
-- [ ] Resumo e gráficos (`resumo.csv`)
+- [ ] Conferência manual de 20 descrições do corpus completo
 - [ ] Relatório (`relatorio.md`)
 
 ## Documentação
 
-Os detalhes de cada função, das ocorrências, das contagens e dos testes realizados estão em [`codigo/documentacao.txt`](codigo/documentacao.txt).
+Os detalhes de cada script, das verificações, das ocorrências, das contagens e dos testes realizados estão em [`codigo/documentacao.txt`](codigo/documentacao.txt).
 
 ## Fonte e licença dos dados
 

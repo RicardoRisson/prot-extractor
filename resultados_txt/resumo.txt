@@ -1,0 +1,55 @@
+RESUMO DO CORPUS
+versão do UniProt: 2026_03
+coleta completa (todas as páginas baixadas): não
+
+== coleta ==
+registros UniProt processados: 150
+registros sem os campos de interesse: 79
+
+== corpus (resultados_json/corpus.jsonl) ==
+descrições: 111
+proteínas distintas: 71
+organismos distintos: 57
+descrições de pH: 65
+descrições de temperatura: 46
+proteínas nas duas categorias: 40
+comprimento mediano dos textos (caracteres): 42
+descrições sem evidência: 0
+textos diferentes de pH: 47
+textos diferentes de temperatura: 30
+
+dez textos mais repetidos:
+1. pH | descrições: 5 | proteínas: 5 | Optimum pH is 7.5.
+2. pH | descrições: 4 | proteínas: 4 | Optimum pH is 8.0.
+3. temperatura | descrições: 4 | proteínas: 4 | Optimum temperature is 30 degrees Celsius.
+4. temperatura | descrições: 4 | proteínas: 4 | Optimum temperature is 50 degrees Celsius.
+5. pH | descrições: 3 | proteínas: 3 | Optimum pH is 7.
+6. temperatura | descrições: 3 | proteínas: 3 | Optimum temperature is 37 degrees Celsius.
+7. temperatura | descrições: 3 | proteínas: 3 | Optimum temperature is 40 degrees Celsius.
+8. temperatura | descrições: 3 | proteínas: 3 | Optimum temperature is 45 degrees Celsius.
+9. pH | descrições: 2 | proteínas: 2 | Optimum pH is 5.5.
+10. pH | descrições: 2 | proteínas: 2 | Optimum pH is 6.
+
+== amostra (resultados_json/corpus_amostra.jsonl) ==
+descrições: 100
+proteínas distintas: 63
+organismos distintos: 49
+descrições de pH: 59
+descrições de temperatura: 41
+proteínas nas duas categorias: 37
+comprimento mediano dos textos (caracteres): 42
+descrições sem evidência: 0
+textos diferentes de pH: 42
+textos diferentes de temperatura: 26
+
+dez textos mais repetidos:
+1. pH | descrições: 5 | proteínas: 5 | Optimum pH is 7.5.
+2. pH | descrições: 4 | proteínas: 4 | Optimum pH is 8.0.
+3. temperatura | descrições: 4 | proteínas: 4 | Optimum temperature is 30 degrees Celsius.
+4. temperatura | descrições: 4 | proteínas: 4 | Optimum temperature is 50 degrees Celsius.
+5. pH | descrições: 3 | proteínas: 3 | Optimum pH is 7.
+6. temperatura | descrições: 3 | proteínas: 3 | Optimum temperature is 37 degrees Celsius.
+7. temperatura | descrições: 3 | proteínas: 3 | Optimum temperature is 40 degrees Celsius.
+8. pH | descrições: 2 | proteínas: 2 | Optimum pH is 5.5.
+9. pH | descrições: 2 | proteínas: 2 | Optimum pH is 6.
+10. pH | descrições: 2 | proteínas: 2 | Optimum pH is 6.0.

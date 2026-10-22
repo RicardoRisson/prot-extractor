@@ -1,0 +1,27 @@
+{
+  "pedido": 100,
+  "situacao": "completa",
+  "todas_as_paginas_baixadas": false,
+  "versao_uniprot": "2026_03",
+  "data_versao": "02-September-2026",
+  "paginas": 3,
+  "registros_processados": 150,
+  "registros_sem_ph_nem_temperatura": 79,
+  "corpus": {
+    "descricoes": 111,
+    "proteinas": 71,
+    "por_categoria": {
+      "ph_dependence": 65,
+      "temperature_dependence": 46
+    }
+  },
+  "amostra": {
+    "descricoes": 100,
+    "proteinas": 63,
+    "por_categoria": {
+      "ph_dependence": 59,
+      "temperature_dependence": 41
+    }
+  },
+  "total_ocorrencias": 0
+}
