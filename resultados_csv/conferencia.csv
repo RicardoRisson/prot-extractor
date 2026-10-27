@@ -1,0 +1,21 @@
+description_id,property_type,source_file,source_path,entrega,arquivo_sorteado,semente,resultado,problemas,correcao
+A0A023VXA2:comments[3].phDependence.texts[0],ph_dependence,originais/pagina_0001.json,comments[3].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A059WLZ7:comments[6].phDependence.texts[0],ph_dependence,originais/pagina_0001.json,comments[6].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A059ZV61:comments[3].phDependence.texts[0],ph_dependence,originais/pagina_0001.json,comments[3].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A060S684:comments[2].phDependence.texts[0],ph_dependence,originais/pagina_0001.json,comments[2].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A075D5I4:comments[2].phDependence.texts[0],ph_dependence,originais/pagina_0001.json,comments[2].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A075D654:comments[3].phDependence.texts[0],ph_dependence,originais/pagina_0001.json,comments[3].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A075D6M1:comments[3].phDependence.texts[0],ph_dependence,originais/pagina_0001.json,comments[3].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A0D2ILK1:comments[3].phDependence.texts[0],ph_dependence,originais/pagina_0002.json,comments[3].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A0E3T552:comments[3].phDependence.texts[0],ph_dependence,originais/pagina_0002.json,comments[3].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A0H3EUF3:comments[3].phDependence.texts[0],ph_dependence,originais/pagina_0003.json,comments[3].phDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A023VXA2:comments[3].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0001.json,comments[3].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A059WLZ7:comments[6].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0001.json,comments[6].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A067YMX8:comments[2].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0001.json,comments[2].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A077LPS9:comments[4].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0001.json,comments[4].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A089MMR2:comments[3].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0001.json,comments[3].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A0D2ILK1:comments[3].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0002.json,comments[3].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A0F5HPP7:comments[1].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0002.json,comments[1].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A0F5HSE8:comments[3].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0002.json,comments[3].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A0G2UGT2:comments[2].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0002.json,comments[2].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
+A0A0H2XJL0:comments[4].temperatureDependence.texts[0],temperature_dependence,originais/pagina_0003.json,comments[4].temperatureDependence.texts[0],amostra,resultados_json/corpus_amostra.jsonl,42,correto,não encontrados,n/a
