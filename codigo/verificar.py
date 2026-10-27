@@ -116,6 +116,9 @@ def main():
     (SAIDA / "verificacao.txt").write_text("\n".join(texto) + "\n", encoding="utf-8")
     print("\n".join(texto))
     print(f"Gravado em {SAIDA.name}/verificacao.txt")
+    falhas = [linha for linha in texto if ": falhou" in linha]
+    if falhas:
+        raise SystemExit(f"{len(falhas)} verificações falharam.")
 
 
 if __name__ == "__main__":
