@@ -3,7 +3,7 @@ import json
 import re
 from collections import Counter, defaultdict
 
-from coletar import CAMPOS, RAIZ, REGISTRO, RESULTADOS, extrair, selecionar
+from coletar import CAMPOS, ORIGINAIS, RAIZ, REGISTRO, RESULTADOS, extrair, selecionar
 from converter import SAIDA as PASTA_CSV, celula
 
 SAIDA = RAIZ / "resultados_txt"
@@ -41,6 +41,15 @@ def conferir_csv(nome, linhas):
         return f"CSV igual ao JSONL: falhou ({len(tabela)} linhas no CSV e {len(linhas)} no JSONL)"
     return resultado("CSV igual ao JSONL", [l.get("description_id") for l, t in zip(linhas, tabela)
                                             if t != {k: celula(v) for k, v in l.items()}])
+
+
+def repetidos_entre_paginas(coleta):
+    paginas = defaultdict(set)
+    for pagina in coleta["paginas"]:
+        for reg in json.loads((ORIGINAIS / pagina["arquivo"]).read_bytes())["results"]:
+            if reg.get("primaryAccession"):
+                paginas[reg["primaryAccession"]].add(pagina["arquivo"])
+    return [acc for acc, arquivos in paginas.items() if len(arquivos) > 1]
 
 
 def verificar(nome, linhas):
@@ -111,6 +120,7 @@ def main():
                                [l.get("description_id") for l in amostra if no_corpus.get(l.get("description_id")) != l]))
         texto.append(f"amostra segue a regra do passo 6: {'ok' if selecionar(corpus, len(amostra)) == amostra else 'falhou'}")
     texto.append(f"reextração a partir de originais/ igual ao corpus: {'ok' if extrair(coleta)[0] == corpus else 'falhou'}")
+    texto.append(resultado("registros em mais de uma página", repetidos_entre_paginas(coleta)))
 
     SAIDA.mkdir(exist_ok=True)
     (SAIDA / "verificacao.txt").write_text("\n".join(texto) + "\n", encoding="utf-8")

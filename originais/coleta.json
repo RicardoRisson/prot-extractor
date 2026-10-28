@@ -1,7 +1,7 @@
 {
   "consulta": "reviewed:true AND cc_bpcp:*",
   "url_inicial": "https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+cc_bpcp%3A%2A&format=json&size=50&sort=accession+asc",
-  "inicio": "2026-10-22T17:52:15+00:00",
+  "inicio": "2026-10-28T12:54:44+00:00",
   "versao_uniprot": "2026_03",
   "data_versao": "02-September-2026",
   "total_registros_busca": "12612",
@@ -10,20 +10,1520 @@
       "arquivo": "pagina_0001.json",
       "url": "https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+cc_bpcp%3A%2A&format=json&size=50&sort=accession+asc",
       "registros": 50,
-      "data": "2026-10-22T17:52:18+00:00"
+      "data": "2026-10-28T12:54:46+00:00"
     },
     {
       "arquivo": "pagina_0002.json",
       "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=1q25awc2agmkxh67j400lfw0pwu0db0mvk1p&size=50",
       "registros": 50,
-      "data": "2026-10-22T17:52:18+00:00"
+      "data": "2026-10-28T12:54:47+00:00"
     },
     {
       "arquivo": "pagina_0003.json",
       "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=bc4hnkgsglv6yfmqpfxrzvv5zbhj1gs09dt19&size=50",
       "registros": 50,
-      "data": "2026-10-22T17:52:19+00:00"
+      "data": "2026-10-28T12:54:47+00:00"
+    },
+    {
+      "arquivo": "pagina_0004.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=bcaboe6of3wuswjvqm1zj72nsulw2v2fjnltp&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:48+00:00"
+    },
+    {
+      "arquivo": "pagina_0005.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=bkf6tu31j2mphp5wdcbp1vhf0zt8c2s9f3x31&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:49+00:00"
+    },
+    {
+      "arquivo": "pagina_0006.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=bkl0unsxhkodc631eifwnh3hqp4pg9c916szh&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:50+00:00"
+    },
+    {
+      "arquivo": "pagina_0007.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=bspw03palje80yp218pm9c3dhh3chqehqor3x&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:51+00:00"
+    },
+    {
+      "arquivo": "pagina_0008.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=bsvq0xf6k1fvvfm72ettuxj9v21s3821u3nst&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:51+00:00"
+    },
+    {
+      "arquivo": "pagina_0009.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=c10l6dbjo05qk887p53kakii1bezlm9m3bigt&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:52+00:00"
+    },
+    {
+      "arquivo": "pagina_0010.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=c16f771fmi7eep5cqb7suhiqr2c4v0d62fwot&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:52+00:00"
+    },
+    {
+      "arquivo": "pagina_0011.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=35cxs78x5h41py21quaqrhsts&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:53+00:00"
+    },
+    {
+      "arquivo": "pagina_0012.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=35efqc4e5vl0saoyiyqe5fq7t&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:54+00:00"
+    },
+    {
+      "arquivo": "pagina_0013.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=37hnxj7iiuupv48m1mb3oh5pt&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:54+00:00"
+    },
+    {
+      "arquivo": "pagina_0014.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=37j5vo2zj9boxgvivb13ret16&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:55+00:00"
+    },
+    {
+      "arquivo": "pagina_0015.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=39me2v63w8le0af6dxw5ui980&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:56+00:00"
+    },
+    {
+      "arquivo": "pagina_0016.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=39nw101kwn2d2n2363z1kd20q&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:56+00:00"
+    },
+    {
+      "arquivo": "pagina_0017.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=3br4874p9mc25glqr2utjizjr&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:57+00:00"
+    },
+    {
+      "arquivo": "pagina_0018.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=3bsm6c06a0t17t8nkr12s2aep&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:58+00:00"
+    },
+    {
+      "arquivo": "pagina_0019.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=3dvudj3an02qamtzkhr96s0hk&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:59+00:00"
+    },
+    {
+      "arquivo": "pagina_0020.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=3dxcbnyrnejpczgwcnm8j0cqh&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:54:59+00:00"
+    },
+    {
+      "arquivo": "pagina_0021.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kphkh19et2hnf29hybz5es0z03&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:00+00:00"
+    },
+    {
+      "arquivo": "pagina_0022.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kphlyzeaa2w4e4m4v44kn00lyp&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:01+00:00"
+    },
+    {
+      "arquivo": "pagina_0023.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpjp76ldefve37foipun0txwtz&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:02+00:00"
+    },
+    {
+      "arquivo": "pagina_0024.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpjqp4q8vg9v29sbflx2xv7gc7&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:02+00:00"
+    },
+    {
+      "arquivo": "pagina_0025.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpltxbxbzt94rclwb0jr13pzjp&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:03+00:00"
+    },
+    {
+      "arquivo": "pagina_0026.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kplvfa27gtnlqeyj7r51tvcpiq&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:04+00:00"
+    },
+    {
+      "arquivo": "pagina_0027.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpnynh9al6mvfhs2vfzqub875c&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:05+00:00"
+    },
+    {
+      "arquivo": "pagina_0028.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpo05fe6271cek4psdmp3syjox&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:06+00:00"
+    },
+    {
+      "arquivo": "pagina_0029.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpq3dml96k0m3myozf06tpexdl&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:06+00:00"
+    },
+    {
+      "arquivo": "pagina_0030.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpq4vkq4nkf32pbbw75a6uf3g2&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:07+00:00"
+    },
+    {
+      "arquivo": "pagina_0031.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kps83rx7rxecrs4vjrbru0giuy&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:08+00:00"
+    },
+    {
+      "arquivo": "pagina_0032.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kps9lq238xstquhigoys298pbp&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:11+00:00"
+    },
+    {
+      "arquivo": "pagina_0033.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpuctx96das3fxb3c9ufmi94j5&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:13+00:00"
+    },
+    {
+      "arquivo": "pagina_0034.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpuebve1ub6keznq98zx1l9gz9&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:14+00:00"
+    },
+    {
+      "arquivo": "pagina_0035.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpwhk2l4yo5u42hblbv7u4pym0&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:14+00:00"
+    },
+    {
+      "arquivo": "pagina_0036.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpwj20q0fokb34tyi73sflpb1x&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:15+00:00"
+    },
+    {
+      "arquivo": "pagina_0037.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpyma7x3k1jks7njdsshq8zvcp&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:16+00:00"
+    },
+    {
+      "arquivo": "pagina_0038.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kpyns61z11y1ra06ao1vxxpsvr&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:16+00:00"
+    },
+    {
+      "arquivo": "pagina_0039.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kq0r0d925exbgctpy88fn5ak38&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:17+00:00"
+    },
+    {
+      "arquivo": "pagina_0040.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=kq0sibdxmfbsff6sen1ech3v5l&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:18+00:00"
+    },
+    {
+      "arquivo": "pagina_0041.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4n6eybes87b3u97esjgfkojzo&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:19+00:00"
+    },
+    {
+      "arquivo": "pagina_0042.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4n7wwga98ls2wlubqxjav8je8&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:20+00:00"
+    },
+    {
+      "arquivo": "pagina_0043.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4pb53nddll1rzfgwa26tri14k&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:21+00:00"
+    },
+    {
+      "arquivo": "pagina_0044.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4pcn1s8ulzir1sjcv3r8jynub&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:22+00:00"
+    },
+    {
+      "arquivo": "pagina_0045.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4rfv8zbyyysg4m75zojrequlz&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:22+00:00"
+    },
+    {
+      "arquivo": "pagina_0046.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4rhd747fzd9f6yu2q5uienoft&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:23+00:00"
+    },
+    {
+      "arquivo": "pagina_0047.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4tklebakccj49sdq78l3gibzk&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:24+00:00"
+    },
+    {
+      "arquivo": "pagina_0048.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4tm3cg61cr03c50mzdmi570vm&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:24+00:00"
+    },
+    {
+      "arquivo": "pagina_0049.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4vpbjn95pq9seykai4bmh5g1k&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:25+00:00"
+    },
+    {
+      "arquivo": "pagina_0050.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4vqths4mq4qrhb778lif3znne&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:26+00:00"
+    },
+    {
+      "arquivo": "pagina_0051.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4xu1oz7r340gk4qupoazqb5a2&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:27+00:00"
+    },
+    {
+      "arquivo": "pagina_0052.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4xvjn4383ihfmhdrhxafumdtm&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:27+00:00"
+    },
+    {
+      "arquivo": "pagina_0053.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l4zyrub6cghr4paxeyvv32es1j&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:28+00:00"
+    },
+    {
+      "arquivo": "pagina_0054.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l5009sg1tgw83rnkbr54emwg3c&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:29+00:00"
+    },
+    {
+      "arquivo": "pagina_0055.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l523hzn4xtvhsuh3z83ywg9ny2&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:30+00:00"
+    },
+    {
+      "arquivo": "pagina_0056.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l524zxs0eu9yrwtqw0d0c46rnd&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:31+00:00"
+    },
+    {
+      "arquivo": "pagina_0057.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l54884z3j798gznajhbqvnool5&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:32+00:00"
+    },
+    {
+      "arquivo": "pagina_0058.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l549q33z07npg1zxg9kodjzz1x&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:33+00:00"
+    },
+    {
+      "arquivo": "pagina_0059.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l56cyab24kmz54th3qjive82lt&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:34+00:00"
+    },
+    {
+      "arquivo": "pagina_0060.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=l56eg8fxll1g47640l0uvbaohm&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:35+00:00"
+    },
+    {
+      "arquivo": "pagina_0061.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=ljsscvderdwysm8hsfrutb386s&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:36+00:00"
+    },
+    {
+      "arquivo": "pagina_0062.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=ljstutia8ebfrol4p697j24epl&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:37+00:00"
+    },
+    {
+      "arquivo": "pagina_0063.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=ljux30pdcrapgreocovqpb9yt6&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:38+00:00"
+    },
+    {
+      "arquivo": "pagina_0064.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=ljuykyu8trp6ftrb9fh1hba3xz&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:39+00:00"
+    },
+    {
+      "arquivo": "pagina_0065.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=ljx1t61by4og4wlagaql8fuxdk&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:40+00:00"
+    },
+    {
+      "arquivo": "pagina_0066.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=ljx3b467f52x3yxxd1bu1nvomv&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:41+00:00"
+    },
+    {
+      "arquivo": "pagina_0067.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=ljz6jbdaji26t1rh0iagmtojg8&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:42+00:00"
+    },
+    {
+      "arquivo": "pagina_0068.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=ljz819i60igns443x8vngs3585&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:43+00:00"
+    },
+    {
+      "arquivo": "pagina_0069.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk1b9gp94vfxh6xnkpya3sc9it&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:44+00:00"
+    },
+    {
+      "arquivo": "pagina_0070.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk1creu4lvueg9aahgjgxx56ia&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:44+00:00"
+    },
+    {
+      "arquivo": "pagina_0071.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk3fzm17q8to5c3u4xm3l6rcs8&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:45+00:00"
+    },
+    {
+      "arquivo": "pagina_0072.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk3hhk6379854egh1olz75elx3&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:46+00:00"
+    },
+    {
+      "arquivo": "pagina_0073.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk5kprd6bm7etha0p5ojvcf6nu&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:47+00:00"
+    },
+    {
+      "arquivo": "pagina_0074.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk5m7pi1smlvsjmnlw9oqstyt4&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:48+00:00"
+    },
+    {
+      "arquivo": "pagina_0075.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk7pfwp4wzl5hmg79dc9f1agxd&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:49+00:00"
+    },
+    {
+      "arquivo": "pagina_0076.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk7qxuu0dzzmgosu63xe9vp7hu&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:50+00:00"
+    },
+    {
+      "arquivo": "pagina_0077.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk9u6213icyw5rmdtl02ushawq&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:50+00:00"
+    },
+    {
+      "arquivo": "pagina_0078.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lk9vo05yzddd4tz0qbl7s7lflf&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:51+00:00"
+    },
+    {
+      "arquivo": "pagina_0079.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lkbyw7d23qcmtwskdsnued9bg5&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:52+00:00"
+    },
+    {
+      "arquivo": "pagina_0080.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lkc0e5hxkqr3sz57aj8z9iibnb&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:52+00:00"
+    },
+    {
+      "arquivo": "pagina_0081.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lyyeasfeqjmmhe7l2cbyp0lta1&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:53+00:00"
+    },
+    {
+      "arquivo": "pagina_0082.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lyyfsqka7k13ggk7z2x3k4x6ka&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:54+00:00"
+    },
+    {
+      "arquivo": "pagina_0083.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz0j0xrdbx0d5jdrml8k3mskl0&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:55+00:00"
+    },
+    {
+      "arquivo": "pagina_0084.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz0kivw8sxeu4lqejbtqxkknqo&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:56+00:00"
+    },
+    {
+      "arquivo": "pagina_0085.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz2nr33bxae3tojy6swdku6ovs&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:57+00:00"
+    },
+    {
+      "arquivo": "pagina_0086.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz2p9187easksqwl3jdgffnxo2&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:58+00:00"
+    },
+    {
+      "arquivo": "pagina_0087.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz4sh8fainruhtq4r0g32fwv8z&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:55:58+00:00"
+    },
+    {
+      "arquivo": "pagina_0088.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz4tz6k5zo6bgw2rnr1bv1ursh&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:00+00:00"
+    },
+    {
+      "arquivo": "pagina_0089.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz6x7dr9415l5ywbb83yi3l1de&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:01+00:00"
+    },
+    {
+      "arquivo": "pagina_0090.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz6ypbw4l1k2518y7yp5cido56&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:01+00:00"
+    },
+    {
+      "arquivo": "pagina_0091.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz91xj37pejbu42hvhfimowks1&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:02+00:00"
+    },
+    {
+      "arquivo": "pagina_0092.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lz93fh836exst6f4s80pgkcg8i&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:03+00:00"
+    },
+    {
+      "arquivo": "pagina_0093.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lzb6nof6arx2i98ofp3c3jyyb5&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:04+00:00"
+    },
+    {
+      "arquivo": "pagina_0094.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lzb85mk1rsbjhblbcfogyzriur&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:04+00:00"
+    },
+    {
+      "arquivo": "pagina_0095.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lzdbdtr4w5at6eeuzwn1l6k5ki&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:05+00:00"
+    },
+    {
+      "arquivo": "pagina_0096.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lzdcvrw0d5pa5grhwn8ae33x2q&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:06+00:00"
+    },
+    {
+      "arquivo": "pagina_0097.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lzfg3z33hiojujl1k4ax13lid0&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:07+00:00"
+    },
+    {
+      "arquivo": "pagina_0098.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lzfhlx7yyj30tlxoguw3v90zzl&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:08+00:00"
+    },
+    {
+      "arquivo": "pagina_0099.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lzhku4f22w2aior84dmh5o1zcj&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:08+00:00"
+    },
+    {
+      "arquivo": "pagina_0100.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=lzhmc2jxjwgrhr3v147m137vaq&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:09+00:00"
+    },
+    {
+      "arquivo": "pagina_0101.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=me408pheppca6668sxanf1wfu8&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:10+00:00"
+    },
+    {
+      "arquivo": "pagina_0102.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=me41qnma6pqr58ivpnvu8ytr8w&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:11+00:00"
+    },
+    {
+      "arquivo": "pagina_0103.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=me64yutdb2q0ubcfd4ugudr703&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:12+00:00"
+    },
+    {
+      "arquivo": "pagina_0104.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=me66gsy8s34htdp29vfnocsdv9&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:12+00:00"
+    },
+    {
+      "arquivo": "pagina_0105.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=me89p05bwg3rigilxciabaxgs3&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:13+00:00"
+    },
+    {
+      "arquivo": "pagina_0106.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=me8b6ya7dgi8hiv8u33h57up0y&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:13+00:00"
+    },
+    {
+      "arquivo": "pagina_0107.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=meaef5hahthi6loshk61tppusz&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:14+00:00"
+    },
+    {
+      "arquivo": "pagina_0108.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=meafx3m5ytvz5o1fecexcab0vk&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:15+00:00"
+    },
+    {
+      "arquivo": "pagina_0109.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mecj5at936v8uquz1thly1oca9&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:17+00:00"
+    },
+    {
+      "arquivo": "pagina_0110.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=meckn8y4k79ptt7lyk2srylraw&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:18+00:00"
+    },
+    {
+      "arquivo": "pagina_0111.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=meenvg57ok8ziw15m11dex97w4&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:19+00:00"
+    },
+    {
+      "arquivo": "pagina_0112.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=meepdea35knghydsirmm7nep0z&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:23+00:00"
+    },
+    {
+      "arquivo": "pagina_0113.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=megsllh69xmq717c68patdjbqo&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:26+00:00"
+    },
+    {
+      "arquivo": "pagina_0114.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=megu3jm1qy1763jz30y6by460q&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:28+00:00"
+    },
+    {
+      "arquivo": "pagina_0115.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=meixbqt4vb0gv6diqi0sz7qg4z&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:28+00:00"
+    },
+    {
+      "arquivo": "pagina_0116.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=meiytoy0cbexu8q5n8lztdsaia&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:29+00:00"
+    },
+    {
+      "arquivo": "pagina_0117.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mel21w53goe7jbjpapkkfj3jp3&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:30+00:00"
+    },
+    {
+      "arquivo": "pagina_0118.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mel3ju9yxosoidwc7g5payw111&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:31+00:00"
+    },
+    {
+      "arquivo": "pagina_0119.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=men6s1h221ry7gpvux8dwzmfxv&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:32+00:00"
+    },
+    {
+      "arquivo": "pagina_0120.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=men89zlxj26f6j2irphfcdk5ro&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:33+00:00"
+    },
+    {
+      "arquivo": "pagina_0121.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mt9m6mjeov1xuy4wjigmmo8851&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:34+00:00"
+    },
+    {
+      "arquivo": "pagina_0122.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mt9nokoa5vgeu0hjgd1wolrewk&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:35+00:00"
+    },
+    {
+      "arquivo": "pagina_0123.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtbqwrvda8foj3b33u0l91szui&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:35+00:00"
+    },
+    {
+      "arquivo": "pagina_0124.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtbseq08r8u5i5nq0kls39ceuo&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:36+00:00"
+    },
+    {
+      "arquivo": "pagina_0125.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtdvmx7bvltf78h9o1oeqiya0j&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:37+00:00"
+    },
+    {
+      "arquivo": "pagina_0126.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtdx4vc7cm7w6atwktxe6n9po1&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:37+00:00"
+    },
+    {
+      "arquivo": "pagina_0127.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtg0d2jagz75vdng8b00tm9lwz&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:38+00:00"
+    },
+    {
+      "arquivo": "pagina_0128.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtg1v0o5xzlmug0351l9mitjci&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:38+00:00"
+    },
+    {
+      "arquivo": "pagina_0129.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mti537v92ckwjitmsijsa8heuy&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:39+00:00"
+    },
+    {
+      "arquivo": "pagina_0130.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mti6l604jczdil69p94z45eqlw&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:41+00:00"
+    },
+    {
+      "arquivo": "pagina_0131.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtk9td77npyn7nztcq7lrdjdrs&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:41+00:00"
+    },
+    {
+      "arquivo": "pagina_0132.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtkbbbc34qd46qcg9igt3wah6i&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:42+00:00"
+    },
+    {
+      "arquivo": "pagina_0133.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtmejij693cdvt5zwzffpl7prm&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:43+00:00"
+    },
+    {
+      "arquivo": "pagina_0134.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtmg1go1q3quuvimtqgooys9yx&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:44+00:00"
+    },
+    {
+      "arquivo": "pagina_0135.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtoj9nv4ugq4jyc6h7j9d6nrlk&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:46+00:00"
+    },
+    {
+      "arquivo": "pagina_0136.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtokrm00bh4lj0otdy4e84i3oz&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:49+00:00"
+    },
+    {
+      "arquivo": "pagina_0137.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtqnzt73fu3v83id1f6ywblmb5&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:50+00:00"
+    },
+    {
+      "arquivo": "pagina_0138.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtqphrbywuic75uzy5s3rgqkoh&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:51+00:00"
+    },
+    {
+      "arquivo": "pagina_0139.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtsspyj217hlw8oktij6z2j4fm&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:52+00:00"
+    },
+    {
+      "arquivo": "pagina_0140.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=mtsu7wnxi7w2vb17q94frsokfu&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:53+00:00"
+    },
+    {
+      "arquivo": "pagina_0141.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8f84jleo0rljq3li23f5o1yyd&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:54+00:00"
+    },
+    {
+      "arquivo": "pagina_0142.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8f9mhqa5162isg8esonylgto2&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:54+00:00"
+    },
+    {
+      "arquivo": "pagina_0143.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8hcuoxd9e5c7v9s29raluc2gp&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:55+00:00"
+    },
+    {
+      "arquivo": "pagina_0144.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8hecn28qejt6xmez0cjev7z8y&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:56+00:00"
+    },
+    {
+      "arquivo": "pagina_0145.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8jhku9burj2w0fymhueke4lrn&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:56+00:00"
+    },
+    {
+      "arquivo": "pagina_0146.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8jj2se7brxjv2slj8fz8bybui&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:57+00:00"
+    },
+    {
+      "arquivo": "pagina_0147.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8lmazlag4wtk5m56qqm83br5e&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:58+00:00"
+    },
+    {
+      "arquivo": "pagina_0148.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8lnsxq5x5baj7ys3hbv19vi9e&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:58+00:00"
+    },
+    {
+      "arquivo": "pagina_0149.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8nr14x91iak8asbqyahmse4ac&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:56:59+00:00"
+    },
+    {
+      "arquivo": "pagina_0150.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8nsj324iip17d4ynpaj8ar19x&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:00+00:00"
+    },
+    {
+      "arquivo": "pagina_0151.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8pvra97mvoawfyib6dzh9n1bs&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:01+00:00"
+    },
+    {
+      "arquivo": "pagina_0152.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8px98e33w2rvib57y3kegldtd&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:01+00:00"
+    },
+    {
+      "arquivo": "pagina_0153.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8s0hfl68921kl4ovfl9mo8upj&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:02+00:00"
+    },
+    {
+      "arquivo": "pagina_0154.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8s1zdq1p9gijnhbs6709nka5z&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:03+00:00"
+    },
+    {
+      "arquivo": "pagina_0155.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8u57kx4tmfs8qavfohr7zgu49&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:04+00:00"
+    },
+    {
+      "arquivo": "pagina_0156.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8u6pj20amu97snicez5utozzn&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:05+00:00"
+    },
+    {
+      "arquivo": "pagina_0157.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8w9xq93eztiwvh1zwhirpjkvt&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:06+00:00"
+    },
+    {
+      "arquivo": "pagina_0158.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8wbfodyw07zvxtowoapzf0jed&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:06+00:00"
+    },
+    {
+      "arquivo": "pagina_0159.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8yenvl20d79l0n8k59ek6j0vm&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:07+00:00"
+    },
+    {
+      "arquivo": "pagina_0160.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=n8yg5tpxhdlqk2zvgvulg29zqr&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:08+00:00"
+    },
+    {
+      "arquivo": "pagina_0161.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnku2gnen6h98i298pctbu9a4a&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:09+00:00"
+    },
+    {
+      "arquivo": "pagina_0162.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnkvkesa46vq7kew5fyrsgqt15&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:11+00:00"
+    },
+    {
+      "arquivo": "pagina_0163.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnmyslzd8juzwn8fsy94xwc3zk&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:12+00:00"
+    },
+    {
+      "arquivo": "pagina_0164.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnn0ak48pk9gvpl2poufq3zjp5&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:13+00:00"
+    },
+    {
+      "arquivo": "pagina_0165.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnp3irbbtx8qksemd5t0c7xstv&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:16+00:00"
+    },
+    {
+      "arquivo": "pagina_0166.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnp50pg7axn7jur99we95i6o1g&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:17+00:00"
+    },
+    {
+      "arquivo": "pagina_0167.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnr88wnafamh8xksxdgvsgbokz&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:17+00:00"
+    },
+    {
+      "arquivo": "pagina_0168.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnr9qus5wb0y7zxfu420plltf7&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:18+00:00"
+    },
+    {
+      "arquivo": "pagina_0169.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nntcz1z90o07x2qzhl4ncl74fn&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:19+00:00"
+    },
+    {
+      "arquivo": "pagina_0170.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnteh044hoeow53mec4muvr5f9&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:19+00:00"
+    },
+    {
+      "arquivo": "pagina_0171.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnvhp7b7m1dyl7x61t7jf0awzb&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:20+00:00"
+    },
+    {
+      "arquivo": "pagina_0172.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnvj75g331sfka9syjsu63dook&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:21+00:00"
+    },
+    {
+      "arquivo": "pagina_0173.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnxmfcn67erp9d3cm0vsn9ofi2&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:21+00:00"
+    },
+    {
+      "arquivo": "pagina_0174.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnxnxas1of668ffzirh1hbpdmd&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:22+00:00"
+    },
+    {
+      "arquivo": "pagina_0175.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnzr5hz4ss5fxi9j68k7umgg8i&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:23+00:00"
+    },
+    {
+      "arquivo": "pagina_0176.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=nnzsng409sjwwkm630crbj0v8w&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:25+00:00"
+    },
+    {
+      "arquivo": "pagina_0177.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=no1vvnb3e5j6lnfpqhbfw921ko&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:25+00:00"
+    },
+    {
+      "arquivo": "pagina_0178.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=no1xdlfyv5xnkpscn8blg53z1u&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:26+00:00"
+    },
+    {
+      "arquivo": "pagina_0179.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=no40lsn1ziwx9slwapedzmp0z6&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:27+00:00"
+    },
+    {
+      "arquivo": "pagina_0180.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=no423qrxgjbe8uyj7fzwnq93qr&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:28+00:00"
+    },
+    {
+      "arquivo": "pagina_0181.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2qg0dpemc6wxa0wz933zldmrb&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:28+00:00"
+    },
+    {
+      "arquivo": "pagina_0182.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2qhibua3cldwcdjvzoip3oab6&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:29+00:00"
+    },
+    {
+      "arquivo": "pagina_0183.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2skqj1d7pknlf73jgrl4m5lpw&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:32+00:00"
+    },
+    {
+      "arquivo": "pagina_0184.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2sm8h68opz4khjqgawbam65v7&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:33+00:00"
+    },
+    {
+      "arquivo": "pagina_0185.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2upgodbt2ye9kda3ruzvc8kz4&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:34+00:00"
+    },
+    {
+      "arquivo": "pagina_0186.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2uqymi7a3cv8mpx0iv5di3m9m&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:35+00:00"
+    },
+    {
+      "arquivo": "pagina_0187.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2wu6tpaegc4xpjgnzyhlglelw&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:35+00:00"
+    },
+    {
+      "arquivo": "pagina_0188.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2wvoru5vgqlwrw3kqjyd02sfu&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:37+00:00"
+    },
+    {
+      "arquivo": "pagina_0189.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2yywz18ztpvlupn87n0qaokl0&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:37+00:00"
+    },
+    {
+      "arquivo": "pagina_0190.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o2z0ex64gu4ckx2a4zfkat3nzp&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:38+00:00"
+    },
+    {
+      "arquivo": "pagina_0191.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o313n4d7l73m9zvtsge4xq9ulw&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:38+00:00"
+    },
+    {
+      "arquivo": "pagina_0192.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o31552i327i3928gp6zdr8c1o7&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:39+00:00"
+    },
+    {
+      "arquivo": "pagina_0193.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o338d9p66khcy520co22cqkmm2&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:40+00:00"
+    },
+    {
+      "arquivo": "pagina_0194.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o339v7u1nkvtx7en9f21wzvd6h&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:40+00:00"
+    },
+    {
+      "arquivo": "pagina_0195.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o35d3f14rxv3ma86ww4qjt4fg5&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:41+00:00"
+    },
+    {
+      "arquivo": "pagina_0196.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o35eld608y9klckttmq1b7h3qr&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:42+00:00"
+    },
+    {
+      "arquivo": "pagina_0197.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o37htkd3db8uafedh3snx4jzay&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:43+00:00"
+    },
+    {
+      "arquivo": "pagina_0198.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o37jbihyubnb9hr0dudurutnqv&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:44+00:00"
+    },
+    {
+      "arquivo": "pagina_0199.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o39mjpp1yomkykkk1bgheckol3&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:45+00:00"
+    },
+    {
+      "arquivo": "pagina_0200.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=o39o1ntxfp11xmx6y21q5v6pf4&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:45+00:00"
+    },
+    {
+      "arquivo": "pagina_0201.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4398xl54v9oh611r7bkgm5y7ejhu&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:46+00:00"
+    },
+    {
+      "arquivo": "pagina_0202.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4398xmn3055hki0tjyh77eqbeb78&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:47+00:00"
+    },
+    {
+      "arquivo": "pagina_0203.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4398zpva789ujrpwdi4o9zfmel9u&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:48+00:00"
+    },
+    {
+      "arquivo": "pagina_0204.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4398zrd8c3quy8oyq51evc639v74&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:48+00:00"
+    },
+    {
+      "arquivo": "pagina_0205.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43991ulfj6v7xie1joovy0q5gxa1&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:57:59+00:00"
+    },
+    {
+      "arquivo": "pagina_0206.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43991w3do2c8bzd3wblmj7k30qwg&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:00+00:00"
+    },
+    {
+      "arquivo": "pagina_0207.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43993zbkv5glb926pv93lu9tziur&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:01+00:00"
+    },
+    {
+      "arquivo": "pagina_0208.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439940tj00xlpq192i5u713qvdbk&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:02+00:00"
+    },
+    {
+      "arquivo": "pagina_0209.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399641q741yozqbw1tba3i61zei&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:03+00:00"
+    },
+    {
+      "arquivo": "pagina_0210.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439965jobziz3gpe8oq32l3bc7qo&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:05+00:00"
+    },
+    {
+      "arquivo": "pagina_0211.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439988rvj2nc2qeh28dk57o3llx1&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:07+00:00"
+    },
+    {
+      "arquivo": "pagina_0212.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43998a9tny4ch7djevaaqejojbzr&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:08+00:00"
+    },
+    {
+      "arquivo": "pagina_0213.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399adi0v18pgh2m8exrox5oqsmw&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:08+00:00"
+    },
+    {
+      "arquivo": "pagina_0214.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399aezyzwppuy1ol1uia418xlwx&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:09+00:00"
+    },
+    {
+      "arquivo": "pagina_0215.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399ci866zu2u7qrelhzcqng41md&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:10+00:00"
+    },
+    {
+      "arquivo": "pagina_0216.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399cjq4bvb38optr8epxvjfvlf6&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:11+00:00"
+    },
+    {
+      "arquivo": "pagina_0217.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399emybiyfg7yewks270i6omtyo&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:12+00:00"
+    },
+    {
+      "arquivo": "pagina_0218.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399eog9ntwgmfdyxeyxlqyjm2id&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:13+00:00"
+    },
+    {
+      "arquivo": "pagina_0219.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399grogux0tlp31qymf32e1vxh0&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:14+00:00"
+    },
+    {
+      "arquivo": "pagina_0220.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=4399gt6ezshu06243lj5o98i0fp6&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:15+00:00"
+    },
+    {
+      "arquivo": "pagina_0221.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439o3731x9nmvoqj5zayraks3nuh&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:16+00:00"
+    },
+    {
+      "arquivo": "pagina_0222.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439o38l0254na5plim7pchfiy6wq&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:17+00:00"
+    },
+    {
+      "arquivo": "pagina_0223.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439o5bt798909feoc5v6f61l659u&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:17+00:00"
+    },
+    {
+      "arquivo": "pagina_0224.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439o5db5e3q0nwdqosrx0ax10183&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:18+00:00"
+    },
+    {
+      "arquivo": "pagina_0225.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439o7gjcl6udn62ticfe2xkkipf6&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:19+00:00"
+    },
+    {
+      "arquivo": "pagina_0226.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439o7i1aq2be1n1vuzc4o4cio3ui&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:20+00:00"
+    },
+    {
+      "arquivo": "pagina_0227.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439o9l9hx5fr0wqyoizlqp1uhxdf&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:22+00:00"
+    },
+    {
+      "arquivo": "pagina_0228.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439o9mrg20wrfdq115wcbvtu79fd&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:24+00:00"
+    },
+    {
+      "arquivo": "pagina_0229.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439obpzn9414enf3upjteiiijcq9&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:24+00:00"
+    },
+    {
+      "arquivo": "pagina_0230.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439obrhldzi4t4e67cgjzpcg37nd&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:25+00:00"
+    },
+    {
+      "arquivo": "pagina_0231.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439odupsl2mhse390w412byabd4g&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:26+00:00"
+    },
+    {
+      "arquivo": "pagina_0232.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439odw7qpy3i6v2bdj0rngujhdf9&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:27+00:00"
+    },
+    {
+      "arquivo": "pagina_0233.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439ofzfxx17v64re72o8q1jbvrsp&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:27+00:00"
+    },
+    {
+      "arquivo": "pagina_0234.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439og0xw1wovklqgjpkzb8aq4lro&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:28+00:00"
+    },
+    {
+      "arquivo": "pagina_0235.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439oi4638zt8jvfjd98gduzp2t88&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:29+00:00"
+    },
+    {
+      "arquivo": "pagina_0236.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439oi5o1dva8ycelpw56yzv4v7si&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:31+00:00"
+    },
+    {
+      "arquivo": "pagina_0237.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439ok8w8kyelxm3ojfso1qg6rfw2&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:32+00:00"
+    },
+    {
+      "arquivo": "pagina_0238.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439okae6ptvmc32qw2pemx99r5f4&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:33+00:00"
+    },
+    {
+      "arquivo": "pagina_0239.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439omdmdwwzzbcrtpmcvpjuve4ad&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:34+00:00"
+    },
+    {
+      "arquivo": "pagina_0240.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=439omf4c1sgzptqw299maoqw0ry1&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:35+00:00"
+    },
+    {
+      "arquivo": "pagina_0241.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a38t0yz9mslcfb4n1fdo6um88g&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:35+00:00"
+    },
+    {
+      "arquivo": "pagina_0242.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a38uix453sztedh9y5ywxc5raw&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:36+00:00"
+    },
+    {
+      "arquivo": "pagina_0243.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3axr4b885z33gatln1hmwdsfo&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:37+00:00"
+    },
+    {
+      "arquivo": "pagina_0244.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3az92g3p6dk2ingidmof7ob3n&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:38+00:00"
+    },
+    {
+      "arquivo": "pagina_0245.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3d2h9n6tjctrlh05upb2h8xmd&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:39+00:00"
+    },
+    {
+      "arquivo": "pagina_0246.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3d3z7s2ajraqntn2lahw3br5f&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:40+00:00"
+    },
+    {
+      "arquivo": "pagina_0247.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3f77ez5ewqkfqn6q2d2lh85yo&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:41+00:00"
+    },
+    {
+      "arquivo": "pagina_0248.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3f8pd40vx51esztmsy9e85zzs&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:42+00:00"
+    },
+    {
+      "arquivo": "pagina_0249.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3hbxkb40a4b3vtdaa0u39rtwz&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:43+00:00"
+    },
+    {
+      "arquivo": "pagina_0250.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3hdfifzhais2y6070mcro5b1x&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:43+00:00"
+    },
+    {
+      "arquivo": "pagina_0251.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3jgnpn2lni1s0zjuhoxgiq6gi&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:44+00:00"
+    },
+    {
+      "arquivo": "pagina_0252.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3ji5nry2nwir3cqgeuf7yba0q&size=50",
+      "registros": 50,
+      "data": "2026-10-28T12:58:45+00:00"
+    },
+    {
+      "arquivo": "pagina_0253.json",
+      "url": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=43a3llduz170vsg66d1fx1j1eaeq&size=50",
+      "registros": 12,
+      "data": "2026-10-28T12:58:45+00:00"
     }
   ],
-  "proxima": "https://rest.uniprot.org/uniprotkb/search?format=json&sort=accession%20asc&query=reviewed%3Atrue%20AND%20cc_bpcp%3A%2A&cursor=bcaboe6of3wuswjvqm1zj72nsulw2v2fjnltp&size=50"
+  "proxima": null
 }

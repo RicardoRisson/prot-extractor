@@ -1,27 +1,20 @@
 {
-  "pedido": 100,
+  "pedido": "max",
   "situacao": "completa",
-  "todas_as_paginas_baixadas": false,
+  "todas_as_paginas_baixadas": true,
   "versao_uniprot": "2026_03",
   "data_versao": "02-September-2026",
-  "paginas": 3,
-  "registros_processados": 150,
-  "registros_sem_ph_nem_temperatura": 79,
+  "paginas": 253,
+  "registros_processados": 12612,
+  "registros_sem_ph_nem_temperatura": 6363,
   "corpus": {
-    "descricoes": 111,
-    "proteinas": 71,
+    "descricoes": 8987,
+    "proteinas": 6249,
     "por_categoria": {
-      "ph_dependence": 65,
-      "temperature_dependence": 46
+      "ph_dependence": 5703,
+      "temperature_dependence": 3284
     }
   },
-  "amostra": {
-    "descricoes": 100,
-    "proteinas": 63,
-    "por_categoria": {
-      "ph_dependence": 59,
-      "temperature_dependence": 41
-    }
-  },
+  "amostra": null,
   "total_ocorrencias": 0
 }

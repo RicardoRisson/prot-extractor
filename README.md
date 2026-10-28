@@ -137,11 +137,11 @@ No CSV, a lista de evidências aparece como texto JSON dentro da célula.
 | Fonte | `https://rest.uniprot.org/uniprotkb/search` |
 | Versão do UniProt | 2026_03 |
 | Data da versão | 02-September-2026 |
-| Início da coleta | 2026-10-24 16:03 (UTC) | 
+| Início da coleta | 2026-10-28 10:04 (UTC) | 
 
 ## Ambiente
 
-Versões registradas em 2026-10-27 com o `versoes.py`.
+Versões registradas em 2026-10-28 com o `versoes.py`.
 
 | | |
 | --- | --- |
@@ -172,8 +172,8 @@ Uma nova consulta ao site pode trazer registros atualizados. Por isso, a referê
 - [x] Amostra de 100 descrições (63 proteínas: 59 de pH e 41 de temperatura), sem ocorrências
 - [x] Verificações gerais, resumo e gráficos automatizados
 - [x] Conferência manual de 20 descrições da amostra (`conferencia.csv`)
-- [ ] Corpus completo
-- [ ] Conferência manual de 20 descrições do corpus completo
+- [x] Corpus completo (8987 descrições, 6249 proteínas), sem ocorrências
+- [x] Conferência manual de 20 descrições do corpus completo
 - [ ] Relatório (`relatorio.md`)
 
 ## Fonte e licença dos dados
