@@ -78,7 +78,7 @@ prot-extractor/
 │   └── versoes.py                    versões do UniProt, do Python e das bibliotecas
 ├── originais/                        respostas do UniProt, com o conteúdo sem edição
 │   ├── coleta.json                   consulta, datas, versão do UniProt e páginas baixadas
-│   └── pagina_0001.json …            páginas como chegaram da API
+│   └── pagina_0001.json …            páginas da API, com o conteúdo sem edição
 ├── originais_formatados/             cópias legíveis, criadas pelo organiza_json.py
 │   └── pagina_0001_formatado.json …
 ├── resultados_json/
@@ -98,6 +98,7 @@ prot-extractor/
 ├── resultados_graficos/
 │   └── graficos.png                  descrições por categoria e comprimento dos textos do corpus
 ├── README.md
+├── relatorio.md                      relatório desta etapa
 └── temp.txt                          saída do versoes.py
 ```
 
@@ -169,12 +170,12 @@ Uma nova consulta ao site pode trazer registros atualizados. Por isso, a referê
 ## Estado do trabalho
 
 - [x] Coleta e extração automatizadas
-- [x] Amostra de 100 descrições (63 proteínas: 59 de pH e 41 de temperatura), sem ocorrências
+- [x] Amostra de 100 descrições (59 de pH e 41 de temperatura, de 63 proteínas), sem ocorrências
 - [x] Verificações gerais, resumo e gráficos automatizados
-- [x] Conferência manual de 20 descrições da amostra (`conferencia.csv`)
+- [x] Conferência manual de 20 descrições da amostra
 - [x] Corpus completo (8987 descrições, 6249 proteínas), sem ocorrências
 - [x] Conferência manual de 20 descrições do corpus completo
-- [ ] Relatório (`relatorio.md`)
+- [x] Relatório (`relatorio.md`)
 
 ## Fonte e licença dos dados
 
