@@ -5,10 +5,10 @@
 | | |
 | --- | --- |
 | Arquivo de origem | `resultados_json/corpus.jsonl` |
-| Versão no repositório | tag `etapa1` (commit `XXXXXXX`) |
+| Versão do corpus usada | tag `etapa1`, na branch `corpus` (commit `9e2ac44`) |
 | Versão do UniProt | 2026_03 |
 | Descrições no corpus | 8987 (3284 de temperatura) |
-| Anotador | [seu nome] |
+| Anotador | Ricardo Risson Machado |
 | Guia | `guia_anotacao_temperatura_etapa2.md`, versão 1.0, de 29/10/2026 |
 
 ## Sorteio
@@ -17,16 +17,19 @@ As descrições com `property_type` igual a `temperature_dependence` foram orden
 
 ## Uso de IA
 
-Nenhuma sugestão automática foi usada na classificação.
+A IA Claude Opus 5.5  foi usada para revisar erros de digitação na tabela (identificadores e numeração das anotações), sem alterar categorias ou escrita qualquer diretamente.
 
 ## Verificações
 
-_preencher ao final_
+Serão registradas ao final das 100 descrições.
 
 ## Decisões de revisão
 
-_responsável, data e decisão de cada caso revisado_
+Nenhuma até o momento.
 
 ## Pendências
 
-_description_id e a dúvida de cada caso pendente_
+| Anotação | Trecho | Dúvida |
+| --- | --- | --- |
+| `A0A261GRE4:comments[6].temperatureDependence.texts[0]:a02` | Maintains 60-50% of activity between 40 and 65 degrees Celsius and retains 30% of activity at 72 degrees Celsius | Não menciona incubação nem tempo; atividade nessas temperaturas ou estabilidade? |
+| `A1A3T0:comments[4].temperatureDependence.texts[0]:a02` | Retains 60% of its activity between 20 and 45 degrees Celsius | Não menciona incubação nem tempo; atividade nessas temperaturas ou estabilidade? |
