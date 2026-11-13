@@ -6,7 +6,7 @@
 
 Corpus de textos do **UniProt (Swiss-Prot)** que descrevem como a atividade ou a estabilidade de proteínas depende do **pH** e da **temperatura**. Cada descrição é guardada exatamente como aparece na fonte, junto com a proteína, a sequência, as evidências e a posição de onde foi retirada. Isso torna cada linha rastreável até o registro original.
 
-O corpus foi pensado para estudos futuros de processamento de linguagem natural. Nesta etapa, o trabalho é coletar, organizar, conferir e descrever os dados. Não há treinamento de modelos nem previsão de propriedades.
+O corpus foi pensado para estudos futuros de processamento de linguagem natural. Na primeira etapa, o trabalho foi coletar, organizar, conferir e descrever os dados. Na segunda, 100 descrições de temperatura receberam anotações sobre o tipo de informação que apresentam, documentadas em [`anotacao_temperatura/README.md`](anotacao_temperatura/README.md). Não há treinamento de modelos nem previsão de propriedades.
 
 | Proteína | Organismo | Categoria | Texto original |
 | --- | --- | --- | --- |
@@ -40,6 +40,15 @@ Nos dois casos, `resultados_json/corpus.jsonl` guarda todas as descrições extr
 
 As páginas já baixadas ficam em `originais/` e são reaproveitadas. Se a conexão cair, basta rodar de novo para continuar de onde parou. As páginas chegam numa linha só, então rode o `organiza_json.py` de novo depois de cada coleta para gerar as cópias legíveis das páginas novas.
 
+Os scripts da etapa 2 rodam da mesma forma:
+
+```bash
+cd codigo
+python sortear_temperatura.py   # sorteio das 100 descrições de temperatura (já executado; não refaz se a amostra existir)
+python verificar_anotacao.py    # confere a tabela de anotações
+python resumo_anotacao.py       # gera o resumo das anotações
+```
+
 ## Como funciona
 
 ```mermaid
@@ -51,6 +60,7 @@ flowchart LR
     C -->|verificar.py| E["resultados_txt/<br/>verificacao.txt"]
     C -->|resumo.py| F["resumo.txt, resumo.csv<br/>e graficos.png"]
     C -->|sortear.py| H["resultados_csv/<br/>conferencia.csv"]
+    C -->|sortear_temperatura.py| I["anotacao_temperatura/<br/>amostra e anotações de temperatura"]
 ```
 
 1. O `coletar.py` consulta a API do UniProt, página por página, e salva cada resposta em `originais/` exatamente como chegou.
@@ -61,6 +71,7 @@ flowchart LR
 6. O `verificar.py` confere cada linha com o registro original: identificador único, campos preenchidos, texto, sequência, organismo, evidências e categoria iguais à fonte. Também confirma que extrair de novo as páginas salvas reproduz o corpus.
 7. O `resumo.py` conta registros, descrições, proteínas e organismos, calcula o comprimento mediano dos textos, lista os textos mais repetidos e desenha os gráficos.
 8. O `sortear.py` sorteia as descrições da conferência manual, 10 de pH e 10 de temperatura, com **semente 42**. Respondendo `amostra`, o sorteio é feito em `corpus_amostra.jsonl`; respondendo `corpus`, em `corpus.jsonl`. As descrições vão para `resultados_csv/conferencia.csv`, que registra a semente e o arquivo sorteado e traz as colunas `resultado`, `problemas` e `correcao` para preencher à mão. A conferência do corpus é acrescentada ao mesmo arquivo, sem apagar a da amostra.
+9. Na etapa 2, o `sortear_temperatura.py` sorteia 100 descrições de temperatura do corpus completo, com **semente 42**, e as grava em `anotacao_temperatura/amostra_temperatura.csv`. As anotações são feitas à mão em `anotacoes_temperatura.csv`; o `verificar_anotacao.py` confere a tabela e o `resumo_anotacao.py` gera as contagens. Os detalhes estão em [`anotacao_temperatura/README.md`](anotacao_temperatura/README.md).
 
 ## Estrutura do projeto
 
@@ -68,38 +79,47 @@ O repositório reúne o código e os dados da coleta. As pastas de dados são cr
 
 ```
 prot-extractor/
-├── codigo/
-│   ├── coletar.py                    coleta e extração
-│   ├── organiza_json.py              cópias formatadas dos arquivos de originais/
-│   ├── converter.py                  conversão para CSV
-│   ├── verificar.py                  verificações gerais
-│   ├── resumo.py                     resumo e gráficos
-│   ├── sortear.py                    sorteio das descrições da conferência manual
-│   └── versoes.py                    versões do UniProt, do Python e das bibliotecas
-├── originais/                        respostas do UniProt, com o conteúdo sem edição
-│   ├── coleta.json                   consulta, datas, versão do UniProt e páginas baixadas
-│   └── pagina_0001.json …            páginas da API, com o conteúdo sem edição
-├── originais_formatados/             cópias legíveis, criadas pelo organiza_json.py
-│   └── pagina_0001_formatado.json …
-├── resultados_json/
-│   ├── corpus_amostra.jsonl          amostra (primeira entrega)
-│   ├── corpus.jsonl                  todas as descrições das páginas baixadas
-│   ├── ocorrencias.jsonl             casos separados para conferência
-│   └── extracao.json                 contagens da última execução
-├── resultados_csv/
-│   ├── corpus_amostra.csv            amostra em CSV
-│   ├── corpus.csv                    corpus em CSV
-│   ├── ocorrencias.csv               ocorrências em CSV
-│   ├── resumo.csv                    resumo do corpus
-│   └── conferencia.csv               conferência manual das descrições sorteadas
-├── resultados_txt/
-│   ├── verificacao.txt               resultado das verificações gerais
-│   └── resumo.txt                    resumo do corpus em texto
-├── resultados_graficos/
-│   └── graficos.png                  descrições por categoria e comprimento dos textos do corpus
+├── .gitignore
 ├── README.md
-├── relatorio.md                      relatório desta etapa
-└── temp.txt                          saída do versoes.py
+├── relatorio.md                             relatório da etapa 1
+├── anotacao_temperatura/                    etapa 2: anotação de descrições de temperatura
+│   ├── README.md                            documentação da etapa 2
+│   ├── guia_anotacao_temperatura_etapa2.md  guia usado na anotação (versão 1.0)
+│   ├── amostra_temperatura.csv              100 descrições de temperatura sorteadas
+│   ├── anotacoes_temperatura.csv            uma linha por afirmação anotada
+│   └── resumo_anotacao.csv                  contagens das categorias e dos status
+├── codigo/
+│   ├── coletar.py                           coleta e extração
+│   ├── organiza_json.py                     cópias formatadas dos arquivos de originais/
+│   ├── converter.py                         conversão para CSV
+│   ├── verificar.py                         verificações gerais
+│   ├── resumo.py                            resumo e gráficos
+│   ├── sortear.py                           sorteio da conferência manual (etapa 1)
+│   ├── versoes.py                           versões do UniProt, do Python e das bibliotecas
+│   ├── sortear_temperatura.py               sorteio das 100 descrições de temperatura (etapa 2)
+│   ├── verificar_anotacao.py                verificações das anotações (etapa 2)
+│   └── resumo_anotacao.py                   resumo das anotações (etapa 2)
+├── originais/                               respostas do UniProt, com o conteúdo sem edição
+│   ├── coleta.json                          consulta, datas, versão do UniProt e páginas baixadas
+│   └── pagina_0001.json …                   253 páginas, como chegaram da API
+├── originais_formatados/                    cópias legíveis, criadas pelo organiza_json.py
+│   └── pagina_0001_formatado.json …         uma cópia para cada página
+├── resultados_json/
+│   ├── corpus_amostra.jsonl                 amostra (primeira entrega)
+│   ├── corpus.jsonl                         todas as descrições da coleta
+│   ├── ocorrencias.jsonl                    casos separados para conferência
+│   └── extracao.json                        contagens da última execução
+├── resultados_csv/
+│   ├── corpus_amostra.csv                   amostra em CSV
+│   ├── corpus.csv                           corpus em CSV
+│   ├── ocorrencias.csv                      ocorrências em CSV
+│   ├── resumo.csv                           resumo do corpus
+│   └── conferencia.csv                      conferência manual das descrições sorteadas (etapa 1)
+├── resultados_txt/
+│   ├── verificacao.txt                      resultado das verificações gerais
+│   └── resumo.txt                           resumo do corpus em texto
+└── resultados_graficos/
+    └── graficos.png                         descrições por categoria e comprimento dos textos do corpus
 ```
 
 ## Critérios de inclusão
@@ -138,7 +158,7 @@ No CSV, a lista de evidências aparece como texto JSON dentro da célula.
 | Fonte | `https://rest.uniprot.org/uniprotkb/search` |
 | Versão do UniProt | 2026_03 |
 | Data da versão | 02-September-2026 |
-| Início da coleta | 2026-10-28 10:04 (UTC) | 
+| Início da coleta | 2026-10-28 10:04 (UTC) |
 
 ## Ambiente
 
@@ -162,12 +182,14 @@ Uma nova consulta ao site pode trazer registros atualizados. Por isso, a referê
 ## Limitações
 
 - **Não é uma tabela de medidas.** Os textos não foram convertidos em valores numéricos padronizados, e o corpus ainda não está dividido em treino e teste.
-- **A amostra não é aleatória.** Ela segue a ordem dos identificadores e não representa a distribuição das proteínas no UniProt.
+- **A amostra da primeira entrega não é aleatória.** Ela segue a ordem dos identificadores e não representa a distribuição das proteínas no UniProt.
 - **A sequência é a do registro.** O texto pode se referir a uma variante, um domínio ou outra forma da proteína.
 - **Ausência de anotação não é ausência da propriedade.** Uma proteína sem descrição de pH pode simplesmente não ter sido estudada nesse aspecto.
 - **Contagens diferentes.** O número de registros retornado pela busca não é o número de descrições do corpus.
 
 ## Estado do trabalho
+
+**Etapa 1: coleta e organização**
 
 - [x] Coleta e extração automatizadas
 - [x] Amostra de 100 descrições (59 de pH e 41 de temperatura, de 63 proteínas), sem ocorrências
@@ -176,6 +198,13 @@ Uma nova consulta ao site pode trazer registros atualizados. Por isso, a referê
 - [x] Corpus completo (8987 descrições, 6249 proteínas), sem ocorrências
 - [x] Conferência manual de 20 descrições do corpus completo
 - [x] Relatório (`relatorio.md`)
+
+**Etapa 2: anotação de descrições de temperatura**
+
+- [x] Sorteio de 100 descrições de temperatura do corpus completo (semente 42)
+- [x] Anotação das 100 descrições (158 anotações)
+- [x] Verificações e resumo das anotações
+- [ ] Decisão das 3 pendências com o orientador
 
 ## Fonte e licença dos dados
 
