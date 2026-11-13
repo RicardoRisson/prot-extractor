@@ -204,7 +204,7 @@ Uma nova consulta ao site pode trazer registros atualizados. Por isso, a referê
 - [x] Sorteio de 100 descrições de temperatura do corpus completo (semente 42)
 - [x] Anotação das 100 descrições (158 anotações)
 - [x] Verificações e resumo das anotações
-- [ ] Decisão das 3 pendências com o orientador
+- [ ] Decisão das 4 pendências com o orientador
 
 ## Fonte e licença dos dados
 
